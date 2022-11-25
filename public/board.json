@@ -1,0 +1,226 @@
+{
+  "data": {
+    "rowHorizontalBottom": [
+      {
+        "color": "light-blue",
+        "name": "Connecticut Avenue",
+        "price": 120,
+        "type": "property"
+      },
+      {
+        "color": "light-blue",
+        "name": "Vermont Avenue",
+        "price": 100,
+        "type": "property"
+      },
+      {
+        "name": "chance",
+        "icon": "fa-question",
+        "type": "chance"
+      },
+      {
+        "color": "light-blue",
+        "name": "Oriental Avenue",
+        "price": 100,
+        "type": "property"
+      },
+      {
+        "name": "Reading Railroad",
+        "price": 120,
+        "icon": "fa-subway",
+        "type": "railroad"
+      },
+      {
+        "name": "Income tax",
+        "icon": "diamond",
+        "info": "Pay 10%<br />or<br />$200",
+        "type": "income-tax"
+      },
+      {
+        "name": "Baltic Avenue",
+        "color": "dark-purple",
+        "price": "50",
+        "type": "property"
+      },
+      {
+        "name": "Community Chest",
+        "icon": "fa-cube",
+        "info": "Follow instructions on top card",
+        "type": "community-chest"
+      },
+      {
+        "name": "Mediter-ranean Avenue",
+        "color": "dark-purple",
+        "price": "50",
+        "type": "property"
+      }
+    ],
+    "rowVerticalLeft": [
+      {
+        "color": "orange",
+        "name": "New York Avenue",
+        "price": 200,
+        "type": "property"
+      },
+      {
+        "color": "orange",
+        "name": "Tennessee Avenue",
+        "price": 180,
+        "type": "property"
+      },
+      {
+        "name": "Community Chest",
+        "icon": "fa-cube",
+        "info": "Follow instructions on top card",
+        "type": "community-chest"
+      },
+      {
+        "color": "orange",
+        "name": "St. James Avenue",
+        "price": 180,
+        "type": "property"
+      },
+      {
+        "name": "Pennsylvania Railroad",
+        "icon": "fa-subway",
+        "price": 200,
+        "type": "railroad"
+      },
+      {
+        "color": "purple",
+        "name": "Virginia Avenue",
+        "price": 160,
+        "type": "property"
+      },
+      {
+        "color": "purple",
+        "name": "States Avenue",
+        "price": 140,
+        "type": "property"
+      },
+      {
+        "name": "Electric Company",
+        "icon": "fa-lightbulb-o",
+        "price": 150,
+        "type": "electric-company"
+      },
+      {
+        "color": "purple",
+        "name": "St. Charles Place",
+        "price": 140,
+        "type": "property"
+      }
+    ],
+    "rowHorizontalTop": [
+      {
+        "color": "red",
+        "name": "Kentucky Avenue",
+        "price": 220,
+        "type": "property"
+      },
+      {
+        "name": "chance",
+        "icon": "fa-question",
+        "type": "chance"
+      },
+      {
+        "color": "red",
+        "name": "Indiana Avenue",
+        "price": 220,
+        "type": "property"
+      },
+      {
+        "color": "red",
+        "name": "Illinois Avenue",
+        "price": 200,
+        "type": "property"
+      },
+      {
+        "name": "B & O Railroad",
+        "icon": "fa-subway",
+        "price": 200,
+        "type": "railroad"
+      },
+      {
+        "color": "yellow",
+        "name": "Atlantic Avenue",
+        "price": 260,
+        "type": "property"
+      },
+      {
+        "color": "yellow",
+        "name": "Ventnor Avenue",
+        "price": 260,
+        "type": "property"
+      },
+      {
+        "name": "Waterworks",
+        "icon": "fa-tint",
+        "price": 120,
+        "type": "waterworks"
+      },
+      {
+        "color": "yellow",
+        "name": "Marvin Gardens",
+        "price": 280,
+        "type": "property"
+      }
+    ],
+    "rowVerticalRight": [
+      {
+        "color": "green",
+        "name": "Pacific Avenue",
+        "price": 300,
+        "type": "property"
+      },
+      {
+        "color": "green",
+        "name": "North Carolina Avenue",
+        "price": 300,
+        "type": "property"
+      },
+      {
+        "name": "Community Chest",
+        "icon": "fa-cube",
+        "info": "Follow instructions on top card",
+        "type": "community-chest"
+      },
+      {
+        "color": "green",
+        "name": "Pennsylvania Avenue",
+        "price": 320,
+        "type": "property"
+      },
+      {
+        "name": "Short Line",
+        "icon": "fa-subway",
+        "price": 200,
+        "type": "railroad"
+      },
+      {
+        "name": "chance",
+        "icon": "fa-question",
+        "asChance": true,
+        "type": "chance"
+      },
+      {
+        "color": "dark-blue",
+        "name": "Park Place",
+        "price": 350,
+        "type": "property"
+      },
+      {
+        "name": "Luxury Tax",
+        "icon": "fa-diamond",
+        "price": 75,
+        "type": "income-tax"
+      },
+      {
+        "color": "dark-blue",
+        "name": "Broadwalk",
+        "price": 400,
+        "type": "property"
+      }
+    ]
+  }
+}
