@@ -8,6 +8,7 @@ export type BoardType = {
 };
 
 export type CardType = {
+  id: string;
   name: string;
   price: number;
   color?: string;

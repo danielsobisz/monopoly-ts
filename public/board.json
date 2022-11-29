@@ -2,47 +2,55 @@
   "data": {
     "rowHorizontalBottom": [
       {
+        "id": 1,
         "color": "light-blue",
         "name": "Connecticut Avenue",
         "price": 120,
         "type": "property"
       },
       {
+        "id": 2,
         "color": "light-blue",
         "name": "Vermont Avenue",
         "price": 100,
         "type": "property"
       },
       {
+        "id": 3,
         "name": "chance",
         "icon": "fa-question",
         "type": "chance"
       },
       {
+        "id": 4,
         "color": "light-blue",
         "name": "Oriental Avenue",
         "price": 100,
         "type": "property"
       },
       {
+        "id": 5,
         "name": "Reading Railroad",
         "price": 120,
         "icon": "fa-subway",
         "type": "railroad"
       },
       {
+        "id": 6,
         "name": "Income tax",
         "icon": "diamond",
         "info": "Pay 10%<br />or<br />$200",
         "type": "income-tax"
       },
       {
+        "id": 7,
         "name": "Baltic Avenue",
         "color": "dark-purple",
         "price": "50",
         "type": "property"
       },
       {
+        "id": 8,
         "name": "Community Chest",
         "icon": "fa-cube",
         "info": "Follow instructions on top card",

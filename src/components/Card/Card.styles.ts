@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-const Space = styled.div``;
+const Space = styled.div`
+  position: relative;
+`;
 
 const Container = styled.div``;
 

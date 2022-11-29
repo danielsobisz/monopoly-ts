@@ -1,14 +1,18 @@
 import { CardType } from "types/board.type";
 
+import * as S from "./Card.styles";
+
 type CardProps = CardType;
 
 export function Card(props: CardProps): React.ReactElement {
-  const { name, price, color, icon, info, type } = props;
+  const { name, price, color, icon, info, type, id } = props;
+
+  console.log(id);
 
   // diamond zamiast icony
 
   return (
-    <div className={`space ${type}`}>
+    <S.Space className={`space ${type}`} id={id}>
       <div className="container">
         {color ? <div className={`color-bar ${color}`} /> : undefined}
 
@@ -20,6 +24,6 @@ export function Card(props: CardProps): React.ReactElement {
 
         {info ? <div className="instructions">{info}</div> : undefined}
       </div>
-    </div>
+    </S.Space>
   );
 }

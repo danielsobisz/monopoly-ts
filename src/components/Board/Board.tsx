@@ -9,6 +9,7 @@ import { Parking } from "components/Parking";
 import { GoToJail } from "components/GoToJail";
 import { Center } from "components/Center";
 import { ControlPanel } from "components/ControlPanel";
+import { Pawn } from "components/Pawn";
 
 export function Board(): React.ReactElement {
   const [board, boardSet] = useState<BoardType>();
