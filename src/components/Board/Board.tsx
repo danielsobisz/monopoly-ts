@@ -8,6 +8,7 @@ import { Jail } from "components/Jail";
 import { Parking } from "components/Parking";
 import { GoToJail } from "components/GoToJail";
 import { Center } from "components/Center";
+import { ControlPanel } from "components/ControlPanel";
 
 export function Board(): React.ReactElement {
   const [board, boardSet] = useState<BoardType>();
@@ -50,6 +51,8 @@ export function Board(): React.ReactElement {
           {renderCards(board?.data?.rowVerticalRight)}
         </div>
       </div>
+
+      <ControlPanel />
     </div>
   );
 }
