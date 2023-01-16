@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { setPosition } from "redux/slices/player";
 
-import { Pawn } from "components/Pawn";
+import { Pawn } from "components/game/Pawn";
 
 type DiceProps = {};
 

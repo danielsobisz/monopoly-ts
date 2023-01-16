@@ -2,13 +2,15 @@ import { useEffect, useState } from "react";
 
 import { BoardType, CardType } from "types/board.type";
 
-import { Card } from "components/Card";
-import { Start } from "components/Start";
-import { Jail } from "components/Jail";
-import { Parking } from "components/Parking";
-import { GoToJail } from "components/GoToJail";
-import { Center } from "components/Center";
-import { ControlPanel } from "components/ControlPanel";
+import { Card } from "components/game/Card";
+import { Start } from "components/game/Start";
+import { Jail } from "components/game/Jail";
+import { Parking } from "components/game/Parking";
+import { GoToJail } from "components/game/GoToJail";
+import { Center } from "components/game/Center";
+import { ControlPanel } from "components/game/ControlPanel";
+
+import * as S from "./Board.styles";
 
 export function Board(): React.ReactElement {
   const [board, boardSet] = useState<BoardType>();
@@ -23,8 +25,8 @@ export function Board(): React.ReactElement {
   }, []);
 
   return (
-    <div className="table">
-      <div className="board">
+    <S.Table>
+      <S.Board>
         <Center />
 
         <Start />
@@ -50,9 +52,9 @@ export function Board(): React.ReactElement {
         <div className="row vertical-row right-row">
           {renderCards(board?.data?.rowVerticalRight)}
         </div>
-      </div>
+      </S.Board>
 
       <ControlPanel />
-    </div>
+    </S.Table>
   );
 }

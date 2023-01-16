@@ -1,4 +1,4 @@
-import { Dice } from "components/Dice";
+import { Dice } from "components/game/Dice";
 
 import * as S from "./ControlPanel.styles";
 
