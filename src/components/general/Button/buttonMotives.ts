@@ -1,4 +1,5 @@
 import { css } from "styled-components";
+import { pickColor } from "themes/helpers/pickColor";
 
 const motives = {
   m0: null,
@@ -6,18 +7,18 @@ const motives = {
     width: 20rem;
     padding: 1rem 2rem;
 
-    font-size: 1.6rem;
-
-    background-color: #c70000;
-    color: #ffffff;
+    background-color: ${pickColor("redSecondary")};
+    color: ${pickColor("white")};
     border-radius: 0.3rem;
+
+    font-size: 1.6rem;
 
     text-transform: uppercase;
     text-align: center;
 
     &:hover {
-      background-color: #ffffff;
-      color: #c70000;
+      background-color: ${pickColor("white")};
+      color: ${pickColor("redSecondary")};
     }
   `,
 };

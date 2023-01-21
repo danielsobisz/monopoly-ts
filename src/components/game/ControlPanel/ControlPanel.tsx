@@ -2,11 +2,7 @@ import { Dice } from "components/game/Dice";
 
 import * as S from "./ControlPanel.styles";
 
-type ControlPanelProps = {};
-
-export function ControlPanel(props: ControlPanelProps): React.ReactElement {
-  const {} = props;
-
+export function ControlPanel(): React.ReactElement {
   return (
     <S.Container>
       <S.Label>

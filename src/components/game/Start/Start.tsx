@@ -1,15 +1,15 @@
-type StartProps = {};
+import * as S from "./Start.styles";
 
-export function Start(props: StartProps): React.ReactElement {
-  // const {} = props;
-
+export function Start(): React.ReactElement {
   return (
-    <div className="space corner go">
-      <div className="container">
-        <div className="instructions">Collect $200.00 salary as you pass</div>
-        <div className="go-word">go</div>
-      </div>
-      <div className="arrow fa fa-long-arrow-left"></div>
-    </div>
+    <S.Corner>
+      <S.Container>
+        <S.Instructions>Collect $200.00 salary as you pass</S.Instructions>
+
+        <S.Go>go</S.Go>
+      </S.Container>
+
+      <S.Arrow className="arrow fa fa-long-arrow-left"></S.Arrow>
+    </S.Corner>
   );
 }

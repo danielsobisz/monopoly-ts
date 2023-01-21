@@ -1,10 +1,6 @@
 import * as S from "./Center.styles";
 
-type CenterProps = {};
-
-export function Center(props: CenterProps): React.ReactElement {
-  // const {} = props;
-
+export function Center(): React.ReactElement {
   return (
     <S.Center>
       <S.CommunityChestDeck>

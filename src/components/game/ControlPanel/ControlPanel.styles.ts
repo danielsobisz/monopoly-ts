@@ -3,13 +3,13 @@ import styled from "styled-components";
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1.5rem;
 `;
 
 const Label = styled.h2`
   color: #ebeae8;
 
-  font-size: 20px;
+  font-size: 2rem;
   text-transform: uppercase;
 `;
 

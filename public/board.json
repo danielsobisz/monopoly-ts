@@ -3,14 +3,14 @@
     "rowHorizontalBottom": [
       {
         "id": 1,
-        "color": "light-blue",
+        "color": "lightBlue",
         "name": "Connecticut Avenue",
         "price": 120,
         "type": "property"
       },
       {
         "id": 2,
-        "color": "light-blue",
+        "color": "lightBlue",
         "name": "Vermont Avenue",
         "price": 100,
         "type": "property"
@@ -23,7 +23,7 @@
       },
       {
         "id": 4,
-        "color": "light-blue",
+        "color": "lightBlue",
         "name": "Oriental Avenue",
         "price": 100,
         "type": "property"
@@ -45,7 +45,7 @@
       {
         "id": 7,
         "name": "Baltic Avenue",
-        "color": "dark-purple",
+        "color": "darkPurple",
         "price": "50",
         "type": "property"
       },
@@ -58,7 +58,7 @@
       },
       {
         "name": "Mediter-ranean Avenue",
-        "color": "dark-purple",
+        "color": "darkPurple",
         "price": "50",
         "type": "property"
       }
@@ -212,19 +212,18 @@
         "type": "chance"
       },
       {
-        "color": "dark-blue",
+        "color": "darkBlue",
         "name": "Park Place",
         "price": 350,
         "type": "property"
       },
       {
         "name": "Luxury Tax",
-        "icon": "fa-diamond",
         "price": 75,
         "type": "income-tax"
       },
       {
-        "color": "dark-blue",
+        "color": "darkBlue",
         "name": "Broadwalk",
         "price": 400,
         "type": "property"

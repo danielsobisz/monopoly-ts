@@ -1,19 +1,21 @@
 import styled from "styled-components";
 
+import { pickColor } from "themes/helpers/pickColor";
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  padding: 5rem 0;
   height: 100vh;
+  padding: 5rem 0;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${pickColor("blackTransparent")};
 `;
 
 const Title = styled.h2`
-  color: #ffffff;
+  color: ${pickColor("white")};
 
   font-size: 3.2rem;
 `;

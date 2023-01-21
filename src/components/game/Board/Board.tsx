@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { BoardType, CardType } from "types/board.type";
+import { BoardType, CardType, Direction, Place } from "types/board.type";
 
 import { Card } from "components/game/Card";
 import { Start } from "components/game/Start";
@@ -15,8 +15,10 @@ import * as S from "./Board.styles";
 export function Board(): React.ReactElement {
   const [board, boardSet] = useState<BoardType>();
 
-  const renderCards = (data?: CardType[]) =>
-    data?.map((item: CardType) => <Card key={item.name} {...item} />);
+  const renderCards = (place: Place, direction: Direction, data?: CardType[]) =>
+    data?.map((item: CardType) => (
+      <Card key={item.name} place={place} direction={direction} {...item} />
+    ));
 
   useEffect(() => {
     fetch("./board.json")
@@ -31,27 +33,31 @@ export function Board(): React.ReactElement {
 
         <Start />
 
-        <div className="row horizontal-row bottom-row">
-          {renderCards(board?.data?.rowHorizontalBottom)}
-        </div>
+        <S.Row direction="horizontal" place="bottom">
+          {renderCards(
+            "bottom",
+            "horizontal",
+            board?.data?.rowHorizontalBottom
+          )}
+        </S.Row>
 
         <Jail />
 
-        <div className="row vertical-row left-row">
-          {renderCards(board?.data?.rowVerticalLeft)}
-        </div>
+        <S.Row direction="vertical" place="left">
+          {renderCards("left", "vertical", board?.data?.rowVerticalLeft)}
+        </S.Row>
 
         <Parking />
 
-        <div className="row horizontal-row top-row">
-          {renderCards(board?.data?.rowHorizontalTop)}
-        </div>
+        <S.Row direction="horizontal" place="top">
+          {renderCards("top", "horizontal", board?.data?.rowHorizontalTop)}
+        </S.Row>
 
         <GoToJail />
 
-        <div className="row vertical-row right-row">
-          {renderCards(board?.data?.rowVerticalRight)}
-        </div>
+        <S.Row direction="vertical" place="right">
+          {renderCards("right", "vertical", board?.data?.rowVerticalRight)}
+        </S.Row>
       </S.Board>
 
       <ControlPanel />

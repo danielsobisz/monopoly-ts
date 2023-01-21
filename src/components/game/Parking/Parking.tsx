@@ -1,15 +1,15 @@
-type ParkingProps = {};
+import * as S from "./Parking.styles";
 
-export function Parking(props: ParkingProps): React.ReactElement {
-  const {} = props;
-
+export function Parking(): React.ReactElement {
   return (
-    <div className="space corner free-parking">
-      <div className="container">
-        <div className="name">Free</div>
-        <i className="drawing fa fa-car"></i>
-        <div className="name">Parking</div>
-      </div>
-    </div>
+    <S.Parking>
+      <S.Container>
+        <S.Name>Free</S.Name>
+
+        <S.Drawing className="fa fa-car" />
+
+        <S.Name>Parking</S.Name>
+      </S.Container>
+    </S.Parking>
   );
 }

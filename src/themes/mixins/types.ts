@@ -1,3 +1,5 @@
-import { DefaultTheme, ThemedStyledProps } from 'styled-components';
+import { DefaultTheme, ThemedStyledProps } from "styled-components";
 
-export type ExtendedPartialThemedStyledProps<T> = Partial<ThemedStyledProps<T, DefaultTheme>>;
+export type ExtendedPartialThemedStyledProps<T> = Partial<
+  ThemedStyledProps<T, DefaultTheme>
+>;

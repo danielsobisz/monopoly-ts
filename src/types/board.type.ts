@@ -16,3 +16,6 @@ export type CardType = {
   info?: string;
   type: string;
 };
+
+export type Direction = "vertical" | "horizontal";
+export type Place = "top" | "right" | "bottom" | "left";

@@ -1,6 +1,13 @@
-import { css, DefaultTheme, FlattenInterpolation, ThemeProps } from 'styled-components';
+import {
+  css,
+  DefaultTheme,
+  FlattenInterpolation,
+  ThemeProps,
+} from "styled-components";
 
-const mediaHover = (cssTemplate: FlattenInterpolation<ThemeProps<DefaultTheme>>) => css`
+const mediaHover = (
+  cssTemplate: FlattenInterpolation<ThemeProps<DefaultTheme>>
+) => css`
   @media (hover: hover) {
     &:hover {
       ${cssTemplate}

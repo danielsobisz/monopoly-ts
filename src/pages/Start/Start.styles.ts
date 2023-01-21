@@ -6,8 +6,8 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  padding: 5rem 0;
   height: 100vh;
+  padding: 5rem 0;
 `;
 
 const ImageWrapper = styled.div`

@@ -59,7 +59,27 @@ const colors = {
   inherit: "inherit",
 
   black: "#080808",
+  blackTransparent: "rgba(0, 0, 0, 0.5)",
+  white: "#ffffff",
+
   board: "#fafaf8",
+
+  brown: "#640303",
+
+  red: "#f50c2b",
+  redSecondary: " #c70000",
+
+  orange: "#fa811d",
+
+  purple: "#b02f7c",
+  darkPurple: "#5e3577",
+
+  lightBlue: "#d2eaf5",
+  darkBlue: "#5a6dba",
+
+  yellow: "#ffed20",
+
+  green: "#41994e",
 } as const;
 
 export type Colors = typeof colors;

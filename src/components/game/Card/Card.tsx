@@ -1,29 +1,38 @@
-import { CardType } from "types/board.type";
+import { CardType, Direction, Place } from "types/board.type";
+import { ColorName } from "types/general.type";
 
 import * as S from "./Card.styles";
 
-type CardProps = CardType;
+type CardProps = CardType & {
+  direction: Direction;
+  place: Place;
+};
 
 export function Card(props: CardProps): React.ReactElement {
-  const { name, price, color, icon, info, type, id } = props;
-
-  console.log(id);
-
-  // diamond zamiast icony
+  const { name, price, color, icon, info, type, id, direction, place } = props;
 
   return (
-    <S.Space className={`space ${type}`} id={id}>
-      <div className="container">
-        {color ? <div className={`color-bar ${color}`} /> : undefined}
+    <S.Space type={type} id={id}>
+      <S.Container type={type} direction={direction} place={place}>
+        {color ? <S.Bar color={color as ColorName} type={type} /> : undefined}
 
-        {icon ? <i className={`drawing fa ${icon}`} /> : undefined}
+        {icon ? <S.Drawing type={type} className={`fa ${icon}`} /> : undefined}
 
-        <div className="name three-line-name">{name}</div>
+        <S.Name type={type}>{name}</S.Name>
 
-        <div className="price">Price ${price}</div>
+        {type === "income-tax" ? (
+          <S.Diamond className="fa fa-diamond" />
+        ) : undefined}
 
-        {info ? <div className="instructions">{info}</div> : undefined}
-      </div>
+        {price ? <S.Price>Price ${price}</S.Price> : undefined}
+
+        {info ? (
+          <S.Instructions
+            type={type}
+            dangerouslySetInnerHTML={{ __html: info }}
+          />
+        ) : undefined}
+      </S.Container>
     </S.Space>
   );
 }

@@ -1,15 +1,15 @@
-type GoToJailProps = {};
+import * as S from "./GoToJail.styles";
 
-export function GoToJail(props: GoToJailProps): React.ReactElement {
-  const {} = props;
-
+export function GoToJail(): React.ReactElement {
   return (
-    <div className="space corner go-to-jail">
-      <div className="container">
-        <div className="name">Go To</div>
-        <i className="drawing fa fa-gavel"></i>
-        <div className="name">Jail</div>
-      </div>
-    </div>
+    <S.Corner>
+      <S.Container>
+        <S.Name>Go To</S.Name>
+
+        <S.Drawing className="fa fa-gavel" />
+
+        <S.Name>Jail</S.Name>
+      </S.Container>
+    </S.Corner>
   );
 }
