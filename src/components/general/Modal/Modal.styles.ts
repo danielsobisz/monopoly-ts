@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
-import { Button } from "components/general/Button";
+import { Button } from 'components/general/Button';
 
 const Container = styled.div`
   position: fixed;
@@ -31,7 +31,7 @@ const Box = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: ${pickColor("white")};
+  background-color: ${pickColor('white')};
   border-radius: ${({ theme }) => theme.borderRadius.big};
 `;
 

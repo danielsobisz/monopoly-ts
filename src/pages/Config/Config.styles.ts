@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
 const Container = styled.div`
   display: flex;
@@ -12,13 +12,13 @@ const Container = styled.div`
   height: 100vh;
   padding: 5rem 0;
 
-  background-color: ${pickColor("blackTransparent")};
+  background-color: ${pickColor('blackTransparent')};
 `;
 
 const Title = styled.h2`
   margin: 5rem 0;
 
-  color: ${pickColor("white")};
+  color: ${pickColor('white')};
 
   font-size: 3.2rem;
 `;

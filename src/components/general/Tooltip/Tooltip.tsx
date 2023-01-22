@@ -1,15 +1,14 @@
-import { Tooltip } from "react-tooltip";
-import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 type TooltipProps = {
   content: string;
   children: React.ReactNode;
-  place?: "top" | "right" | "left" | "bottom";
-  effect?: "float" | "solid";
+  place?: 'top' | 'right' | 'left' | 'bottom';
 };
 
 export function TooltipComponent(props: TooltipProps): React.ReactElement {
-  const { content, children, place = "top" } = props;
+  const { content, children, place = 'top' } = props;
 
   return (
     <>
@@ -17,7 +16,7 @@ export function TooltipComponent(props: TooltipProps): React.ReactElement {
         place={place}
         style={{
           fontSize: 16,
-          textTransform: "none",
+          textTransform: 'none',
         }}
         anchorId="my-element"
       />

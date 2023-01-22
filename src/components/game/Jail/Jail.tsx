@@ -1,4 +1,4 @@
-import * as S from "./Jail.styles";
+import * as S from './Jail.styles';
 
 export function Jail(): React.ReactElement {
   return (
@@ -16,7 +16,7 @@ export function Jail(): React.ReactElement {
 
             <S.Bar />
 
-            <S.Person className="fa fa-frown-o"></S.Person>
+            <S.Person className="fa fa-frown-o" />
           </S.Window>
 
           <S.Name>Jail</S.Name>

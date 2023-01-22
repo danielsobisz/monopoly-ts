@@ -1,20 +1,19 @@
-import { css, DefaultTheme } from "styled-components";
+import { css, DefaultTheme } from 'styled-components';
 
-import { mediaMinWidth } from "themes/mixins/mediaQueries";
+import { mediaMinWidth } from 'themes/mixins/mediaQueries';
 
-import { ExtendedPartialThemedStyledProps } from "./types";
+import { ExtendedPartialThemedStyledProps } from './types';
 
-import { theme } from "../theme";
+import { theme } from '../theme';
 
-export type FontScaleName = keyof DefaultTheme["fontScales"];
+export type FontScaleName = keyof DefaultTheme['fontScales'];
 
 export type FontScaleProps = {
   scale?: FontScaleName;
 };
 
 export type FontScale = FontScaleName | [FontScaleName, FontScaleName];
-export type ThemeAndFontScaleProps =
-  ExtendedPartialThemedStyledProps<FontScaleProps>;
+export type ThemeAndFontScaleProps = ExtendedPartialThemedStyledProps<FontScaleProps>;
 
 const getFontScale = (scale: FontScale) =>
   Array.isArray(scale)

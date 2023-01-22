@@ -1,9 +1,9 @@
-import styled from "styled-components";
-import { pickColor } from "themes/helpers/pickColor";
+import styled from 'styled-components';
+import { pickColor } from 'themes/helpers/pickColor';
 
-import { FontScale, getFontScale } from "themes/mixins/getFontScale";
+import { FontScale, getFontScale } from 'themes/mixins/getFontScale';
 
-import { pickMotive, ButtonMotives } from "./buttonMotives";
+import { pickMotive, ButtonMotives } from './buttonMotives';
 
 export type StyledButtonProps = {
   motive?: ButtonMotives;
@@ -31,8 +31,8 @@ const Button = styled.button<StyledButtonProps>`
   ${({ motive }) => motive && pickMotive(motive)};
 
   &.disabled {
-    background-color: ${pickColor("disabled")};
-    color: ${pickColor("black")};
+    background-color: ${pickColor('disabled')};
+    color: ${pickColor('black')};
     border: none;
 
     cursor: not-allowed;

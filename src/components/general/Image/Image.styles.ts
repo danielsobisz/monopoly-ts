@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export type StyledImageProps = {
   height?: string;
@@ -13,7 +13,7 @@ const Wrapper = styled.figure<StyledImageProps>`
 
   margin: 0;
   width: 100%;
-  height: ${({ height }) => height || "100%"};
+  height: ${({ height }) => height || '100%'};
 `;
 
 const Image = styled.img`

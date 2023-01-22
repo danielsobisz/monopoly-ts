@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export interface PlayerState {
   position: number;
@@ -9,7 +9,7 @@ const initialState: PlayerState = {
 };
 
 export const playerSlice = createSlice({
-  name: "player",
+  name: 'player',
   initialState,
   reducers: {
     setPosition: (state, action) => {

@@ -1,1 +1,1 @@
-export { GoToJail } from "./GoToJail";
+export { GoToJail } from './GoToJail';

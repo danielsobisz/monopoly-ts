@@ -1,7 +1,7 @@
-import { CardType, Direction, Place } from "types/board.type";
-import { ColorName } from "types/general.type";
+import { CardType, Direction, Place } from 'types/board.type';
+import { ColorName } from 'types/general.type';
 
-import * as S from "./Card.styles";
+import * as S from './Card.styles';
 
 type CardProps = CardType & {
   direction: Direction;
@@ -20,17 +20,12 @@ export function Card(props: CardProps): React.ReactElement {
 
         <S.Name type={type}>{name}</S.Name>
 
-        {type === "income-tax" ? (
-          <S.Diamond className="fa fa-diamond" />
-        ) : undefined}
+        {type === 'income-tax' ? <S.Diamond className="fa fa-diamond" /> : undefined}
 
         {price ? <S.Price>Price ${price}</S.Price> : undefined}
 
         {info ? (
-          <S.Instructions
-            type={type}
-            dangerouslySetInnerHTML={{ __html: info }}
-          />
+          <S.Instructions type={type} dangerouslySetInnerHTML={{ __html: info }} />
         ) : undefined}
       </S.Container>
     </S.Space>

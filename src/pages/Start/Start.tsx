@@ -1,8 +1,8 @@
-import Logo from "assets/logo.png";
+import Logo from 'assets/logo.png';
 
-import { Image } from "components/general/Image";
+import { Image } from 'components/general/Image';
 
-import * as S from "./Start.styles";
+import * as S from './Start.styles';
 
 export function StartPage(): React.ReactElement {
   return (

@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { FieldValues, useForm } from 'react-hook-form';
 
 import { TooltipComponent } from 'components/general/Tooltip';
 import { Button } from 'components/general/Button';
 import { Input } from 'components/general/Input';
+import { Icon } from 'components/general/Icon';
 
 import { PawnModal } from './components/PawnModal';
 
@@ -19,8 +20,13 @@ export function ConfigPage(): React.ReactElement {
   const isMax = inputsAmount.length === 6;
   const isMin = inputsAmount.length < 2;
 
+  const handleOnCompleted = useCallback(
+    (iconName: string) => console.log(`${iconName} successfully loaded`),
+    []
+  );
+
   const inputsComponents = inputsAmount.map((index) => (
-    <S.PlayerData>
+    <S.PlayerData key={index}>
       <S.Inner>
         <Input register={register} name={`player${index}`}>
           {`Player #${index}`}
@@ -68,6 +74,8 @@ export function ConfigPage(): React.ReactElement {
             start game
           </Button>
         </TooltipComponent>
+
+        <Icon name="dog" />
       </S.Container>
 
       {isModalOpen ? <PawnModal onClose={() => isModalOpenSet(false)} /> : undefined}

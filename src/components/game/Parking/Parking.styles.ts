@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
 const Parking = styled.div`
   grid-column: 1;
   grid-row: 1 / 2;
 
-  background: ${pickColor("board")};
+  background: ${pickColor('board')};
 
   text-align: center;
 `;
@@ -33,7 +33,7 @@ const Drawing = styled.div`
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 
-  color: ${pickColor("red")};
+  color: ${pickColor('red')};
 
   font-size: 6rem;
 `;

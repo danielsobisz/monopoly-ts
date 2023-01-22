@@ -1,13 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { StyledButtonProps, StyledLabelProps } from "./Button.styles";
-import * as S from "./Button.styles";
+import { StyledButtonProps, StyledLabelProps } from './Button.styles';
+import * as S from './Button.styles';
 
 type ButtonItem = {
   onClick?: () => void;
   asLink?: boolean;
   to?: string;
-  type?: "button" | "submit";
+  type?: 'button' | 'submit';
   className?: string;
 };
 
@@ -23,12 +23,12 @@ export function Button(props: ButtonProps): React.ReactElement {
   const {
     onClick = () => null,
     children,
-    motive = "default",
-    to = "",
+    motive = 'default',
+    to = '',
     asLink = false,
-    className = "",
+    className = '',
     disabled = false,
-    scale = "s",
+    scale = 's',
     ref, // eslint-disable-line
     ...rest
   } = props;
@@ -36,9 +36,9 @@ export function Button(props: ButtonProps): React.ReactElement {
   return (
     <S.Button
       disabled={disabled}
-      className={`${className || ""} ${disabled ? "disabled" : ""}`}
+      className={`${className || ''} ${disabled ? 'disabled' : ''}`}
       to={disabled ? undefined : to}
-      as={to && asLink ? Link : "button"}
+      as={to && asLink ? Link : 'button'}
       onClick={onClick}
       {...rest}
       motive={motive}

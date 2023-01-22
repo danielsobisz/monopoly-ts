@@ -4,16 +4,14 @@ import {
   FlattenInterpolation,
   FlattenSimpleInterpolation,
   ThemeProps,
-} from "styled-components";
-import { breakpoints } from "themes/config";
+} from 'styled-components';
+import { breakpoints } from 'themes/config';
 
 type BreakpointKeys = keyof typeof breakpoints;
 
 type MediaMinWidth = Record<
   BreakpointKeys,
-  (
-    cssTemplate: FlattenInterpolation<ThemeProps<DefaultTheme>>
-  ) => FlattenSimpleInterpolation
+  (cssTemplate: FlattenInterpolation<ThemeProps<DefaultTheme>>) => FlattenSimpleInterpolation // eslint-disable-line
 >;
 
 const breakpointKeys = Object.keys(breakpoints) as BreakpointKeys[];

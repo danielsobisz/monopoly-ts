@@ -1,4 +1,4 @@
-import * as S from "./Center.styles";
+import * as S from './Center.styles';
 
 export function Center(): React.ReactElement {
   return (

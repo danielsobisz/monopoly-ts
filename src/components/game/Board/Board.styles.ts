@@ -1,8 +1,8 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
-import { Direction, Place } from "types/board.type";
+import { Direction, Place } from 'types/board.type';
 
 export type StyledRowProps = {
   direction: Direction;
@@ -10,7 +10,7 @@ export type StyledRowProps = {
 };
 
 const getStylesForDirection = (direction: Direction) => {
-  if (direction === "vertical") {
+  if (direction === 'vertical') {
     return css`
       grid-template-columns: 12.5rem;
       grid-template-rows: repeat(9, 8rem);
@@ -25,22 +25,22 @@ const getStylesForDirection = (direction: Direction) => {
 
 const getStylesForPlace = (place: Place) => {
   switch (place) {
-    case "top":
+    case 'top':
       return css`
         grid-column: 2 / 11;
         grid-row: 1;
       `;
-    case "right":
+    case 'right':
       return css`
         grid-column: 11;
         grid-row: 2 / 11;
       `;
-    case "bottom":
+    case 'bottom':
       return css`
         grid-column: 2 / 11;
         grid-row: 11;
       `;
-    case "left":
+    case 'left':
       return css`
         grid-column: 1;
         grid-row: 2 / 11;
@@ -66,8 +66,8 @@ const Board = styled.div`
   height: 99.4rem;
   margin: 0 auto 5rem 0.5rem;
 
-  background: ${pickColor("black")};
-  border: 0.2rem solid ${pickColor("black")};
+  background: ${pickColor('black')};
+  border: 0.2rem solid ${pickColor('black')};
 `;
 
 const Row = styled.div<StyledRowProps>`

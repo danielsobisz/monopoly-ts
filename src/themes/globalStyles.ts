@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import background from "assets/background.jpg";
+import background from 'assets/background.jpg';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-size: 1rem;
 
-    color: ${pickColor("black")};
+    color: ${pickColor('black')};
     text-transform: uppercase;
   }
 

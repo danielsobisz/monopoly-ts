@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
 const Center = styled.div`
   display: grid;
@@ -11,7 +11,7 @@ const Center = styled.div`
   justify-items: center;
   align-items: center;
 
-  background: ${pickColor("board")};
+  background: ${pickColor('board')};
 `;
 
 const Title = styled.h2`
@@ -55,7 +55,7 @@ const Deck = styled.div`
   width: 16rem;
   height: 12rem;
 
-  border: 0.2rem dashed ${pickColor("black")};
+  border: 0.2rem dashed ${pickColor('black')};
 `;
 
 export { Center, Title, CommunityChestDeck, Label, Deck, ChanceDeck };

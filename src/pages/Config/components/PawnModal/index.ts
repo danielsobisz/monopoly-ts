@@ -1,1 +1,1 @@
-export { PawnModal } from "./PawnModal";
+export { PawnModal } from './PawnModal';

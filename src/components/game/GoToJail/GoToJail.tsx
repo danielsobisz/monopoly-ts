@@ -1,4 +1,4 @@
-import * as S from "./GoToJail.styles";
+import * as S from './GoToJail.styles';
 
 export function GoToJail(): React.ReactElement {
   return (

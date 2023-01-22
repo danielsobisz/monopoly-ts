@@ -1,6 +1,6 @@
-import { Dice } from "components/game/Dice";
+import { Dice } from 'components/game/Dice';
 
-import * as S from "./ControlPanel.styles";
+import * as S from './ControlPanel.styles';
 
 export function ControlPanel(): React.ReactElement {
   return (

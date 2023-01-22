@@ -1,4 +1,4 @@
-import * as S from "./Start.styles";
+import * as S from './Start.styles';
 
 export function Start(): React.ReactElement {
   return (
@@ -9,7 +9,7 @@ export function Start(): React.ReactElement {
         <S.Go>go</S.Go>
       </S.Container>
 
-      <S.Arrow className="arrow fa fa-long-arrow-left"></S.Arrow>
+      <S.Arrow className="arrow fa fa-long-arrow-left" />
     </S.Corner>
   );
 }

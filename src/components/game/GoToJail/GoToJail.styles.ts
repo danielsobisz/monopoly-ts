@@ -1,11 +1,12 @@
-import styled from "styled-components";
-import { pickColor } from "themes/helpers/pickColor";
+import styled from 'styled-components';
+
+import { pickColor } from 'themes/helpers/pickColor';
 
 const Corner = styled.div`
   grid-column: 11;
   grid-row: 1 / 1;
 
-  background: ${pickColor("board")};
+  background: ${pickColor('board')};
 
   text-align: center;
 `;
@@ -34,7 +35,7 @@ const Drawing = styled.i`
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 
-  color: ${pickColor("brown")};
+  color: ${pickColor('brown')};
 
   font-size: 6rem;
 `;

@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 import { theme } from 'themes/theme';
 import { GlobalStyle } from 'themes/globalStyles';
@@ -11,27 +11,29 @@ import { ConfigPage } from 'pages/Config';
 
 function App() {
   return (
-    <div className="app">
-      <Helmet>
-        <script src="https://kit.fontawesome.com/3f6db4959a.js" crossOrigin="anonymous" />
-      </Helmet>
+    <HelmetProvider>
+      <div className="app">
+        <Helmet>
+          <script src="https://kit.fontawesome.com/3f6db4959a.js" crossOrigin="anonymous" />
+        </Helmet>
 
-      <BrowserRouter>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
+        <BrowserRouter>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle />
 
-          <Routes>
-            <Route index element={<StartPage />} />
+            <Routes>
+              <Route index element={<StartPage />} />
 
-            <Route path="/config" element={<ConfigPage />} />
+              <Route path="/config" element={<ConfigPage />} />
 
-            <Route path="/game" element={<GamePage />} />
-          </Routes>
-        </ThemeProvider>
-      </BrowserRouter>
+              <Route path="/game" element={<GamePage />} />
+            </Routes>
+          </ThemeProvider>
+        </BrowserRouter>
 
-      <div id="portalContext" />
-    </div>
+        <div id="portalContext" />
+      </div>
+    </HelmetProvider>
   );
 }
 

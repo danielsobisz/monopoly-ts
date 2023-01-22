@@ -1,5 +1,5 @@
-import * as S from "./Image.styles";
-import { StyledImageProps } from "./Image.styles";
+import * as S from './Image.styles';
+import { StyledImageProps } from './Image.styles';
 
 type ImageProps = {
   source: string;
@@ -7,13 +7,8 @@ type ImageProps = {
   className?: string;
 } & StyledImageProps;
 
-const defaultProps: Partial<ImageProps> = {
-  height: undefined,
-  className: undefined,
-};
-
 export function Image(props: ImageProps): React.ReactElement {
-  const { source, alt, height, className } = { ...defaultProps, ...props };
+  const { source, alt, height = '', className = '' } = props;
 
   return (
     <S.Wrapper className={className} height={height}>

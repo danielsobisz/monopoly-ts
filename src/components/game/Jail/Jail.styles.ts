@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { pickColor } from "themes/helpers/pickColor";
+import styled from 'styled-components';
+import { pickColor } from 'themes/helpers/pickColor';
 
 const Corner = styled.div`
   display: grid;
@@ -10,7 +10,7 @@ const Corner = styled.div`
   justify-content: center;
   align-items: center;
 
-  background: ${pickColor("board")};
+  background: ${pickColor('board')};
 
   text-align: center;
 `;
@@ -31,9 +31,9 @@ const Drawing = styled.div`
   width: 8.75rem;
   height: 8.75rem;
 
-  background: ${pickColor("orange")};
-  border-bottom: 0.2rem solid ${pickColor("black")};
-  border-left: 0.2rem solid ${pickColor("black")};
+  background: ${pickColor('orange')};
+  border-bottom: 0.2rem solid ${pickColor('black')};
+  border-left: 0.2rem solid ${pickColor('black')};
 `;
 
 const Container = styled.div`
@@ -73,8 +73,8 @@ const Window = styled.div`
   width: 5.5rem;
   height: 5.5rem;
 
-  background: ${pickColor("board")};
-  border: 0.2rem solid ${pickColor("black")};
+  background: ${pickColor('board')};
+  border: 0.2rem solid ${pickColor('black')};
 `;
 
 const Person = styled.i`
@@ -92,17 +92,7 @@ const Bar = styled.div`
   height: 5.5rem;
   width: 0.2rem;
 
-  background: ${pickColor("black")};
+  background: ${pickColor('black')};
 `;
 
-export {
-  Corner,
-  Just,
-  Drawing,
-  Container,
-  Name,
-  Visiting,
-  Window,
-  Person,
-  Bar,
-};
+export { Corner, Just, Drawing, Container, Name, Visiting, Window, Person, Bar };

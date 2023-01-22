@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
-import { Direction, Place } from "types/board.type";
-import { ColorName } from "types/general.type";
+import { Direction, Place } from 'types/board.type';
+import { ColorName } from 'types/general.type';
 
 type StyledContainerProps = {
   place: Place;
@@ -22,15 +22,15 @@ type StyledBarProps = {
 
 const getStylesForPlace = (place: Place) => {
   switch (place) {
-    case "top":
+    case 'top':
       return css`
         transform: rotate(180deg);
       `;
-    case "right":
+    case 'right':
       return css`
         transform: translate(-50%, -50%) rotate(270deg);
       `;
-    case "left":
+    case 'left':
       return css`
         transform: translate(-50%, -50%) rotate(90deg);
       `;
@@ -41,13 +41,13 @@ const getStylesForPlace = (place: Place) => {
 
 const getStylesForSpace = (type: string) => {
   switch (type) {
-    case "name":
-    case "instructions":
+    case 'name':
+    case 'instructions':
       return css`
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       `;
-    case "price":
+    case 'price':
       return css`
         padding-bottom: 0.5rem;
 
@@ -61,22 +61,22 @@ const getStylesForSpace = (type: string) => {
 
 const getStylesForName = (type: string) => {
   switch (type) {
-    case "property":
+    case 'property':
       return css`
         padding-bottom: 5rem;
       `;
-    case "utility":
-    case "railroad":
+    case 'utility':
+    case 'railroad':
       return css`
         padding-top: 1rem;
       `;
-    case "fee":
+    case 'fee':
       return css`
         padding-top: 1rem;
 
         font-size: 1.4rem;
       `;
-    case "income-tax":
+    case 'income-tax':
       return css`
         padding-bottom: 0.5rem;
       `;
@@ -87,11 +87,11 @@ const getStylesForName = (type: string) => {
 
 const getStylesForBar = (type: string) => {
   switch (type) {
-    case "property":
+    case 'property':
       return css`
         height: 2.5rem;
 
-        border-bottom: 0.2rem solid ${pickColor("black")};
+        border-bottom: 0.2rem solid ${pickColor('black')};
       `;
     default:
       return css``;
@@ -100,47 +100,47 @@ const getStylesForBar = (type: string) => {
 
 const getStylesForDrawing = (type: string) => {
   switch (type) {
-    case "railroad":
+    case 'railroad':
       return css`
         margin: 1rem;
 
-        color: ${pickColor("black")};
+        color: ${pickColor('black')};
 
         font-size: 5rem;
       `;
-    case "utility":
+    case 'utility':
       return css`
         font-size: 7rem;
       `;
-    case "electric-company":
+    case 'electric-company':
       return css`
         margin: 1rem;
 
-        color: ${pickColor("yellow")};
+        color: ${pickColor('yellow')};
 
         font-size: 5rem;
       `;
-    case "waterworks":
+    case 'waterworks':
       return css`
         margin: 1rem;
 
-        color: ${pickColor("darkBlue")};
+        color: ${pickColor('darkBlue')};
 
         font-size: 5rem;
       `;
-    case "luxury-tax":
+    case 'luxury-tax':
       return css`
         font-size: 5rem;
       `;
-    case "chance":
+    case 'chance':
       return css`
-        color: ${pickColor("darkBlue")};
+        color: ${pickColor('darkBlue')};
 
         font-size: 9rem;
       `;
-    case "community-chest":
+    case 'community-chest':
       return css`
-        color: ${pickColor("lightBlue")};
+        color: ${pickColor('lightBlue')};
 
         font-size: 5rem;
       `;
@@ -151,19 +151,19 @@ const getStylesForDrawing = (type: string) => {
 
 const getStylesForInstructions = (type: string) => {
   switch (type) {
-    case "income-tax":
+    case 'income-tax':
       return css`
         padding: 0.5rem 0;
       `;
-    case "luxury-tax":
+    case 'luxury-tax':
       return css`
         padding-bottom: 0.5rem;
       `;
-    case "fee":
+    case 'fee':
       return css`
         font-size: 1rem;
       `;
-    case "community-chest":
+    case 'community-chest':
       return css`
         font-size: 0.8rem;
       `;
@@ -174,15 +174,15 @@ const getStylesForInstructions = (type: string) => {
 
 const getStylesForContainerType = (type: string) => {
   switch (type) {
-    case "chance":
+    case 'chance':
       return css`
         justify-content: center;
       `;
-    case "community-chest":
+    case 'community-chest':
       return css`
         justify-content: space-around;
       `;
-    case "income-tax":
+    case 'income-tax':
       return css`
         justify-content: center;
         align-items: center;
@@ -195,7 +195,7 @@ const getStylesForContainerType = (type: string) => {
 const Space = styled.div<StyledSpaceProps>`
   position: relative;
 
-  background: ${pickColor("board")};
+  background: ${pickColor('board')};
 
   text-align: center;
 
@@ -215,7 +215,7 @@ const Container = styled.div<StyledContainerProps>`
   transform-origin: center;
 
   ${({ direction }) =>
-    direction === "vertical"
+    direction === 'vertical'
       ? css`
           top: 50%;
           left: 50%;

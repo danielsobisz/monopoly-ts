@@ -1,23 +1,21 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-import { useAppDispatch, useAppSelector } from "redux/hooks";
-import { setPosition } from "redux/slices/player";
+import { useAppDispatch, useAppSelector } from 'redux/hooks';
+import { setPosition } from 'redux/slices/player';
 
-import { Pawn } from "components/game/Pawn";
+import { Pawn } from 'components/game/Pawn';
 
 type DiceProps = {};
 
 export function Dice(props: DiceProps): React.ReactElement {
   const dispatch = useAppDispatch();
 
-  const {} = props;
+  // const {} = props;
 
   const position = useAppSelector((state) => state.player.position);
 
-  const [portalElement, setPortalElement] = useState<React.ReactElement | null>(
-    null
-  );
+  const [portalElement, setPortalElement] = useState<React.ReactElement | null>(null);
 
   const roll = () => {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -39,7 +37,9 @@ export function Dice(props: DiceProps): React.ReactElement {
 
   return (
     <>
-      <button onClick={() => roll()}>Roll the Dice!</button>
+      <button type="button" onClick={() => roll()}>
+        Roll the Dice!
+      </button>
 
       {portalElement}
     </>

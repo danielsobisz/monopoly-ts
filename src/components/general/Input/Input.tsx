@@ -1,6 +1,6 @@
-import { RegisterType } from "types/general.type";
+import { RegisterType } from 'types/general.type';
 
-import * as S from "./Input.styles";
+import * as S from './Input.styles';
 
 type InputProps = {
   register: RegisterType;
@@ -10,7 +10,7 @@ type InputProps = {
 };
 
 export function Input(props: InputProps): React.ReactElement {
-  const { register, name, children = "", className = "" } = props;
+  const { register, name, children = '', className = '' } = props;
 
   return (
     <S.Container className={className}>

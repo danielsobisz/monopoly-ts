@@ -1,4 +1,4 @@
-import * as S from "./Parking.styles";
+import * as S from './Parking.styles';
 
 export function Parking(): React.ReactElement {
   return (

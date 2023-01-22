@@ -1,6 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import { playerSlice } from "redux/slices/player";
+import { playerSlice } from 'redux/slices/player';
 
 const store = configureStore({
   reducer: {

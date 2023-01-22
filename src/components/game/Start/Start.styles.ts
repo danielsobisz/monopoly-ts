@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { pickColor } from "themes/helpers/pickColor";
+import { pickColor } from 'themes/helpers/pickColor';
 
 const Corner = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ const Corner = styled.div`
   grid-column: 11;
   grid-row: 11 / 12;
 
-  background: ${pickColor("board")};
+  background: ${pickColor('board')};
 
   text-align: center;
 `;
@@ -32,7 +32,7 @@ const Instructions = styled.div`
 `;
 
 const Go = styled.h2`
-  color: ${pickColor("red")};
+  color: ${pickColor('red')};
 
   font-size: 6rem;
 `;
@@ -42,7 +42,7 @@ const Arrow = styled.i`
   bottom: -1rem;
   left: 0.5rem;
 
-  color: ${pickColor("red")};
+  color: ${pickColor('red')};
 
   font-size: 4rem;
 `;
