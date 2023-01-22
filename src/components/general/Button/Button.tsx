@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { StyledButtonProps } from "./Button.styles";
+import { StyledButtonProps, StyledLabelProps } from "./Button.styles";
 import * as S from "./Button.styles";
 
 type ButtonItem = {
@@ -16,6 +16,7 @@ export type ButtonProps = React.DetailedHTMLProps<
   HTMLButtonElement
 > &
   StyledButtonProps &
+  StyledLabelProps &
   ButtonItem;
 
 export function Button(props: ButtonProps): React.ReactElement {
@@ -27,6 +28,7 @@ export function Button(props: ButtonProps): React.ReactElement {
     asLink = false,
     className = "",
     disabled = false,
+    scale = "s",
     ref, // eslint-disable-line
     ...rest
   } = props;
@@ -35,13 +37,13 @@ export function Button(props: ButtonProps): React.ReactElement {
     <S.Button
       disabled={disabled}
       className={`${className || ""} ${disabled ? "disabled" : ""}`}
-      to={disabled ? "" : to}
+      to={disabled ? undefined : to}
       as={to && asLink ? Link : "button"}
       onClick={onClick}
       {...rest}
       motive={motive}
     >
-      <S.Label>{children}</S.Label>
+      <S.Label scale={scale}>{children}</S.Label>
     </S.Button>
   );
 }

@@ -1,9 +1,16 @@
 import styled from "styled-components";
+import { pickColor } from "themes/helpers/pickColor";
+
+import { FontScale, getFontScale } from "themes/mixins/getFontScale";
 
 import { pickMotive, ButtonMotives } from "./buttonMotives";
 
 export type StyledButtonProps = {
   motive?: ButtonMotives;
+};
+
+export type StyledLabelProps = {
+  scale?: FontScale;
 };
 
 const Button = styled.button<StyledButtonProps>`
@@ -22,8 +29,18 @@ const Button = styled.button<StyledButtonProps>`
   transition: 200ms ease-in;
 
   ${({ motive }) => motive && pickMotive(motive)};
+
+  &.disabled {
+    background-color: ${pickColor("disabled")};
+    color: ${pickColor("black")};
+    border: none;
+
+    cursor: not-allowed;
+  }
 `;
 
-const Label = styled.p``;
+const Label = styled.p<StyledLabelProps>`
+  ${({ scale }) => scale && getFontScale(scale)};
+`;
 
 export { Button, Label };

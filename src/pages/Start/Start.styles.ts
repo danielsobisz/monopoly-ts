@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
+import { Button } from "components/general/Button";
+
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   height: 100vh;
@@ -11,7 +12,18 @@ const Container = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 50rem;
+  margin: 5rem auto 0 auto;
+  width: 70rem;
 `;
 
-export { Container, ImageWrapper };
+const StartButton = styled(Button)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 35rem;
+
+  transform: translate(-50%, -50%);
+`;
+
+export { Container, ImageWrapper, StartButton };

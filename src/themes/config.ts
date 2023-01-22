@@ -61,6 +61,9 @@ const colors = {
   black: "#080808",
   blackTransparent: "rgba(0, 0, 0, 0.5)",
   white: "#ffffff",
+  whiteOff: "#F2F2F2",
+
+  gray: "#5A5A5A",
 
   board: "#fafaf8",
 
@@ -80,6 +83,8 @@ const colors = {
   yellow: "#ffed20",
 
   green: "#41994e",
+
+  disabled: "#E2E2E2",
 } as const;
 
 export type Colors = typeof colors;

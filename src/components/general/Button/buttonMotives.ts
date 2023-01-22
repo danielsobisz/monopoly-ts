@@ -4,14 +4,12 @@ import { pickColor } from "themes/helpers/pickColor";
 const motives = {
   m0: null,
   default: css`
-    width: 20rem;
+    min-width: 20rem;
     padding: 1rem 2rem;
 
     background-color: ${pickColor("redSecondary")};
     color: ${pickColor("white")};
-    border-radius: 0.3rem;
-
-    font-size: 1.6rem;
+    border-radius: 0.6rem;
 
     text-transform: uppercase;
     text-align: center;
@@ -19,6 +17,22 @@ const motives = {
     &:hover {
       background-color: ${pickColor("white")};
       color: ${pickColor("redSecondary")};
+    }
+  `,
+  white: css`
+    height: 4rem;
+    padding: 1rem 2rem;
+
+    background-color: ${pickColor("whiteOff")};
+    border: 0.1rem solid ${pickColor("black")};
+    color: ${pickColor("gray")};
+
+    text-align: center;
+
+    &:hover {
+      background-color: ${pickColor("gray")};
+      border-color: ${pickColor("gray")};
+      color: ${pickColor("whiteOff")};
     }
   `,
 };
