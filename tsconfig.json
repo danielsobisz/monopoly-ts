@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -15,7 +16,19 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src"
+    "types": ["cypress", "@testing-library/cypress"],
+    "strictPropertyInitialization": false
   },
-  "include": ["src"]
+  "paths": {
+    "components/*": ["components/*"]
+  },
+  "ignorePatterns": ["cypress/**/**.ts"],
+  "include": [
+    "src",
+    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "tests/**/*.ts",
+    "cypress/**/*.ts"
+  ]
 }

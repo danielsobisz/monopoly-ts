@@ -1,4 +1,4 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 import {
   fontScales,
   FontScales,
@@ -10,16 +10,18 @@ import {
   Colors,
   TextAligns,
   textAligns,
-} from "./config";
+  borderRadius,
+  BorderRadiuses,
+} from './config';
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     colors: Colors;
     fontScales: FontScales;
     fontWeights: FontWeights;
     maxWidth: string;
     transitionSpeed: string;
-    borderRadius: Record<string, string>;
+    borderRadius: BorderRadiuses;
     textTransforms: TextTransforms;
     textAligns: TextAligns;
   }
@@ -29,14 +31,10 @@ const theme: DefaultTheme = {
   colors,
   fontWeights,
   textTransforms,
-  borderRadius: {
-    base: "0.3rem",
-    big: "0.6rem",
-    big2: "1.6rem",
-  },
+  borderRadius,
   fontScales,
-  maxWidth: "117rem",
-  transitionSpeed: "200ms",
+  maxWidth: '117rem',
+  transitionSpeed: '200ms',
   textAligns,
 };
 
