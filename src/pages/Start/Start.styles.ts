@@ -8,6 +8,7 @@ const Container = styled.div`
   align-items: center;
 
   height: 100vh;
+  min-height: 80rem;
   padding: 5rem 0;
 `;
 

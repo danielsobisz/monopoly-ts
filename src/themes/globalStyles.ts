@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
-import background from 'assets/background.jpg';
-
 import { pickColor } from 'themes/helpers/pickColor';
+
+import background from 'assets/background.jpg';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -16,10 +16,10 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 80rem;
     margin: 0;
 
-    /* overflow: hidden; */
 
     background-image: url(${background});
     background-position: center;

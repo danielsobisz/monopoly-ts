@@ -1,17 +1,18 @@
 import { Dispatch, SetStateAction, useState } from 'react';
-import { PlayerInfo } from 'types/data.type';
 
-import { Headline } from 'components/general/Headline';
-import { Modal } from 'components/general/Modal';
-import { Icon } from 'components/general/Icon';
+import { Player } from 'types/data.type';
+
 import { Button } from 'components/general/Button';
+import { Headline } from 'components/general/Headline';
+import { Icon } from 'components/general/Icon';
+import { Modal } from 'components/general/Modal';
 
 import * as S from './PawnModal.styles';
 
 type PawnModalProps = {
   onClose: () => void;
   activeIndex: number;
-  playerInfoSet: Dispatch<SetStateAction<PlayerInfo[]>>;
+  playerInfoSet: Dispatch<SetStateAction<Player[]>>;
 };
 
 export function PawnModal(props: PawnModalProps): React.ReactElement {

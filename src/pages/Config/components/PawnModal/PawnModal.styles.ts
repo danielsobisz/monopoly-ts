@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { pickColor } from 'themes/helpers/pickColor';
 
 const Container = styled.div`
@@ -8,7 +9,7 @@ const Container = styled.div`
   align-items: center;
 
   width: 120rem;
-  height: 80rem;
+  height: 60rem;
   padding: 8rem;
 
   background-color: ${pickColor('backgroundGrey')};

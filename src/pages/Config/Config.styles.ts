@@ -12,6 +12,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   height: 100vh;
+  min-height: 80rem;
   padding: 5rem 0;
 
   background-color: ${pickColor('blackTransparent')};

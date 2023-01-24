@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
-import { PlayerInfo } from 'types/data.type';
+import { Player } from 'types/data.type';
+
+import { useAppDispatch } from 'redux/hooks';
+import { setPlayers } from 'redux/slices/game';
 
 import { Button } from 'components/general/Button';
 import { Input } from 'components/general/Input';
@@ -14,13 +18,17 @@ import { PawnModal } from './components/PawnModal';
 export function ConfigPage(): React.ReactElement {
   const { register } = useForm();
 
+  const dispatch = useAppDispatch();
+
+  const navigate = useNavigate();
+
   const [inputsAmount, inputsAmountSet] = useState<number[]>([1, 2]);
   const [isModalOpen, isModalOpenSet] = useState<boolean>(false);
-  const [playerInfo, playerInfoSet] = useState<PlayerInfo[]>([]);
+  const [playerInfo, playerInfoSet] = useState<Player[]>([]);
   const [activeIndex, activeIndexSet] = useState<number>(0);
 
   const isMax = inputsAmount.length === 6;
-  const isMin = playerInfo.length > 2;
+  const isMin = playerInfo.length >= 2;
 
   const checkPlayerValidation = () => {
     if (playerInfo.length < 2) {
@@ -37,8 +45,10 @@ export function ConfigPage(): React.ReactElement {
       toast.error('Check your player data');
       return;
     }
-
+    console.log(playerInfo);
+    dispatch(setPlayers(playerInfo));
     toast.success('lets play!');
+    navigate('/game');
   };
 
   const inputsComponents = inputsAmount.map((index) => {
