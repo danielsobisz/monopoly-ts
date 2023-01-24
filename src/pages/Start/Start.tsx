@@ -12,7 +12,7 @@ export function StartPage(): React.ReactElement {
       </S.ImageWrapper>
 
       <S.Container>
-        <S.StartButton scale="xl3" asLink to="/config">
+        <S.StartButton scale="lg" asLink to="/config">
           Start
         </S.StartButton>
       </S.Container>

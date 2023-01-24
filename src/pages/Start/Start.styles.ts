@@ -21,7 +21,7 @@ const StartButton = styled(Button)`
   top: 50%;
   left: 50%;
 
-  width: 35rem;
+  width: 20rem;
 
   transform: translate(-50%, -50%);
 `;

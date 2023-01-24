@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { pickColor } from 'themes/helpers/pickColor';
+import { getFontScale } from 'themes/mixins/getFontScale';
 
 const Container = styled.div``;
 
@@ -20,6 +21,8 @@ const StyledInput = styled.input`
 
   background-color: ${pickColor('whiteOff')};
   border: 0.1rem solid ${pickColor('black')};
+
+  ${getFontScale('base')}
 `;
 
 export { Container, Label, StyledInput };

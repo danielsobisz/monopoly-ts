@@ -1,4 +1,5 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from 'styled-components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
@@ -32,6 +33,8 @@ function App() {
         </BrowserRouter>
 
         <div id="portalContext" />
+
+        <Toaster />
       </div>
     </HelmetProvider>
   );

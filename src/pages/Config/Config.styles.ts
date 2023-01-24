@@ -2,6 +2,8 @@ import styled, { keyframes } from 'styled-components';
 
 import { pickColor } from 'themes/helpers/pickColor';
 
+import { Button } from 'components/general/Button';
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -61,4 +63,8 @@ const ButtonWrapper = styled.div`
   justify-self: flex-end;
 `;
 
-export { Container, Title, Inputs, ButtonWrapper, PlayerData, Inner };
+const ButtonPawn = styled(Button)`
+  width: 20rem;
+`;
+
+export { Container, Title, Inputs, ButtonWrapper, PlayerData, Inner, ButtonPawn };

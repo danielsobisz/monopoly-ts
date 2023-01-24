@@ -34,6 +34,11 @@ const GlobalStyle = createGlobalStyle`
     text-transform: uppercase;
   }
 
+  button {
+    border: none;
+    background-color: transparent;
+  }
+
   h1,
   h2,
   h3,

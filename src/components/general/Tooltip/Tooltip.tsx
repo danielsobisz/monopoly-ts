@@ -18,10 +18,10 @@ export function TooltipComponent(props: TooltipProps): React.ReactElement {
           fontSize: 16,
           textTransform: 'none',
         }}
-        anchorId="my-element"
+        anchorId={content}
       />
 
-      <p id="my-element" data-tooltip-content={content}>
+      <p id={content} data-tooltip-content={content}>
         {children}
       </p>
     </>

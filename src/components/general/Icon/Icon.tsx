@@ -3,23 +3,30 @@ import { ReactComponent as Iron } from 'assets/iron.svg';
 import { ReactComponent as Shoe } from 'assets/shoe.svg';
 import { ReactComponent as Dog } from 'assets/dog.svg';
 
-interface IProps {
-  name: 'hat' | 'iron' | 'shoe' | 'dog';
-}
+import * as S from './Icon.styles';
+import { StyledContainerProps } from './Icon.styles';
 
-export function Icon(props: IProps) {
-  const { name } = props;
+type IconProps = {
+  name: string;
+} & StyledContainerProps;
 
-  switch (name) {
-    case 'hat':
-      return <Hat />;
-    case 'dog':
-      return <Dog />;
-    case 'iron':
-      return <Iron />;
-    case 'shoe':
-      return <Shoe />;
-    default:
-      return <span>no icon</span>;
-  }
+export function Icon(props: IconProps) {
+  const { name, color = 'black' } = props;
+
+  const pickIcon = () => {
+    switch (name) {
+      case 'hat':
+        return <Hat />;
+      case 'dog':
+        return <Dog />;
+      case 'iron':
+        return <Iron />;
+      case 'shoe':
+        return <Shoe />;
+      default:
+        return <span>no icon</span>;
+    }
+  };
+
+  return <S.Container color={color}>{pickIcon()}</S.Container>;
 }
