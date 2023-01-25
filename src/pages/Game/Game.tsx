@@ -7,13 +7,14 @@ import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { setPlayers } from 'redux/slices/game';
 
 import { Board } from 'components/game/Board';
+import { Sidebar } from 'components/game/Sidebar';
 
 import * as S from './Game.styles';
 
 export function GamePage(): React.ReactElement {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const disptach = useAppDispatch();
-  const { players } = useAppSelector((state) => state.game);
+  // const { players } = useAppSelector((state) => state.game);
 
   useEffect(() => {
     // mock
@@ -43,6 +44,8 @@ export function GamePage(): React.ReactElement {
   return (
     <S.Container>
       <Board />
+
+      <Sidebar />
     </S.Container>
   );
 }

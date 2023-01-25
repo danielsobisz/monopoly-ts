@@ -3,12 +3,11 @@ import { useEffect, useState } from 'react';
 import { BoardType, CardType, Direction, Place } from 'types/board.type';
 
 import { Card } from 'components/game/Card';
-import { Start } from 'components/game/Start';
+import { Center } from 'components/game/Center';
+import { GoToJail } from 'components/game/GoToJail';
 import { Jail } from 'components/game/Jail';
 import { Parking } from 'components/game/Parking';
-import { GoToJail } from 'components/game/GoToJail';
-import { Center } from 'components/game/Center';
-import { ControlPanel } from 'components/game/ControlPanel';
+import { Start } from 'components/game/Start';
 
 import * as S from './Board.styles';
 
@@ -55,8 +54,6 @@ export function Board(): React.ReactElement {
           {renderCards('right', 'vertical', board?.data?.rowVerticalRight)}
         </S.Row>
       </S.Board>
-
-      <ControlPanel />
     </S.Table>
   );
 }

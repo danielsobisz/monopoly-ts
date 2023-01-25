@@ -4,7 +4,7 @@ import { Player } from 'types/data.type';
 
 import { Button } from 'components/general/Button';
 import { Headline } from 'components/general/Headline';
-import { Icon } from 'components/general/Icon';
+import { IconSVG } from 'components/general/IconSVG';
 import { Modal } from 'components/general/Modal';
 
 import * as S from './PawnModal.styles';
@@ -39,7 +39,7 @@ export function PawnModal(props: PawnModalProps): React.ReactElement {
 
   const iconsComponents = icons.map((item) => (
     <button type="button" onClick={() => selectedIconSet(item)}>
-      <Icon color={selectedIcon === item ? 'red' : 'black'} name={item} />
+      <IconSVG color={selectedIcon === item ? 'red' : 'black'} name={item} />
     </button>
   ));
 

@@ -1,5 +1,17 @@
+import { IconSVG } from 'components/general/IconSVG';
+
 import * as S from './Pawn.styles';
 
-export function Pawn(): React.ReactElement {
-  return <S.Container />;
+type PawnProps = {
+  name: string;
+};
+
+export function Pawn(props: PawnProps): React.ReactElement {
+  const { name } = props;
+
+  return (
+    <S.Container>
+      <IconSVG name={name} />
+    </S.Container>
+  );
 }

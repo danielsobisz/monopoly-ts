@@ -1,16 +1,16 @@
+import { ReactComponent as Dog } from 'assets/dog.svg';
 import { ReactComponent as Hat } from 'assets/hat.svg';
 import { ReactComponent as Iron } from 'assets/iron.svg';
 import { ReactComponent as Shoe } from 'assets/shoe.svg';
-import { ReactComponent as Dog } from 'assets/dog.svg';
 
-import * as S from './Icon.styles';
-import { StyledContainerProps } from './Icon.styles';
+import * as S from './IconSVG.styles';
+import { StyledContainerProps } from './IconSVG.styles';
 
 type IconProps = {
   name: string;
 } & StyledContainerProps;
 
-export function Icon(props: IconProps) {
+export function IconSVG(props: IconProps) {
   const { name, color = 'black' } = props;
 
   const pickIcon = () => {

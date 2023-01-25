@@ -63,7 +63,7 @@ const Board = styled.div`
   width: 99.4rem;
   height: 99.4rem;
 
-  margin: 0 10rem;
+  margin: 0 5rem;
 
   background: ${pickColor('black')};
   border: 0.2rem solid ${pickColor('black')};
