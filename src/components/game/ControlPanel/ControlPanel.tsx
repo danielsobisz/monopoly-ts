@@ -1,19 +1,34 @@
-import { Dice } from 'components/game/Dice';
+import { Button } from 'components/general/Button';
+import { Tooltip } from 'components/general/Tooltip';
 
 import * as S from './ControlPanel.styles';
 
 export function ControlPanel(): React.ReactElement {
   return (
     <S.Container>
-      <S.Label>
-        Current Player: <S.Info>Daniel</S.Info>
-      </S.Label>
+      <S.Info>
+        <S.Icon name="FaRegUser" />
 
-      <S.Label>
-        Money: <S.Info>300$</S.Info>
-      </S.Label>
+        <S.Text>Daniel</S.Text>
+      </S.Info>
 
-      <Dice />
+      <S.Info>
+        <S.Icon name="FaRegMoneyBillAlt" />
+
+        <S.Text>4800$</S.Text>
+      </S.Info>
+
+      <S.Info>
+        <S.Icon name="FaHome" />
+
+        <S.Text>11</S.Text>
+
+        <Tooltip content="Check your properties">
+          <Button motive="m0">
+            <S.IconHand name="FaRegHandPointRight" />
+          </Button>
+        </Tooltip>
+      </S.Info>
     </S.Container>
   );
 }

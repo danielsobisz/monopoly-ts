@@ -1,4 +1,4 @@
-import { Tooltip } from 'react-tooltip';
+import { Tooltip as ReactTooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 
 type TooltipProps = {
@@ -7,12 +7,12 @@ type TooltipProps = {
   place?: 'top' | 'right' | 'left' | 'bottom';
 };
 
-export function TooltipComponent(props: TooltipProps): React.ReactElement {
+export function Tooltip(props: TooltipProps): React.ReactElement {
   const { content, children, place = 'top' } = props;
 
   return (
     <>
-      <Tooltip
+      <ReactTooltip
         place={place}
         style={{
           fontSize: 16,

@@ -73,6 +73,7 @@ const colors = {
 
   gray: '#5A5A5A',
   backgroundGrey: '#E3E3E3',
+  darkGrey: '#A0A0A0',
 
   board: '#fafaf8',
 

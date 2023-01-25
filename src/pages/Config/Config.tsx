@@ -10,7 +10,7 @@ import { setPlayers } from 'redux/slices/game';
 
 import { Button } from 'components/general/Button';
 import { Input } from 'components/general/Input';
-import { TooltipComponent } from 'components/general/Tooltip';
+import { Tooltip } from 'components/general/Tooltip';
 
 import * as S from './Config.styles';
 import { PawnModal } from './components/PawnModal';
@@ -114,15 +114,15 @@ export function ConfigPage(): React.ReactElement {
         {inputsComponents}
 
         <S.ButtonWrapper>
-          <TooltipComponent content={isMax ? 'Maximum amount of players is 6.' : ''}>
+          <Tooltip content={isMax ? 'Maximum amount of players is 6.' : ''}>
             <Button type="button" disabled={isMax} scale="lg" onClick={() => addInput()}>
               Add Player
             </Button>
-          </TooltipComponent>
+          </Tooltip>
         </S.ButtonWrapper>
       </S.Inputs>
 
-      <TooltipComponent content={!isMin ? 'Minimum amount of players is 2.' : ''}>
+      <Tooltip content={!isMin ? 'Minimum amount of players is 2.' : ''}>
         <Button
           type="submit"
           scale="xl2"
@@ -131,7 +131,7 @@ export function ConfigPage(): React.ReactElement {
         >
           start game
         </Button>
-      </TooltipComponent>
+      </Tooltip>
 
       {isModalOpen ? (
         <PawnModal
