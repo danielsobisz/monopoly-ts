@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { pickColor } from 'themes/helpers/pickColor';
 
 const Parking = styled.div`
+  position: relative;
+
   grid-column: 1;
   grid-row: 1 / 2;
 

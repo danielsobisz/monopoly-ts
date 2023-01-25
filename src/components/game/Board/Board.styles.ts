@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import { pickColor } from 'themes/helpers/pickColor';
-
 import { Direction, Place } from 'types/board.type';
+
+import { pickColor } from 'themes/helpers/pickColor';
 
 export type StyledRowProps = {
   direction: Direction;
@@ -52,8 +52,6 @@ const getStylesForPlace = (place: Place) => {
 
 const Table = styled.div`
   display: flex;
-
-  margin: 5rem;
 `;
 
 const Board = styled.div`
@@ -64,7 +62,8 @@ const Board = styled.div`
 
   width: 99.4rem;
   height: 99.4rem;
-  margin: 0 auto 5rem 0.5rem;
+
+  margin: 0 10rem;
 
   background: ${pickColor('black')};
   border: 0.2rem solid ${pickColor('black')};

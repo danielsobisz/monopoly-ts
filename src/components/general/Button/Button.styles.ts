@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { pickColor } from 'themes/helpers/pickColor';
 
+import { pickColor } from 'themes/helpers/pickColor';
 import { FontScale, getFontScale } from 'themes/mixins/getFontScale';
 
-import { pickMotive, ButtonMotives } from './buttonMotives';
+import { ButtonMotives, pickMotive } from './buttonMotives';
 
 export type StyledButtonProps = {
   motive?: ButtonMotives;
@@ -20,6 +20,8 @@ const Button = styled.button<StyledButtonProps>`
   background-color: transparent;
   color: inherit;
   border: none;
+
+  font-family: 'Roboto Mono', sans-serif;
 
   text-decoration: none;
 

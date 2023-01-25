@@ -2,7 +2,7 @@ import * as S from './Jail.styles';
 
 export function Jail(): React.ReactElement {
   return (
-    <S.Corner>
+    <S.Corner id="11">
       <S.Just>Just</S.Just>
 
       <S.Drawing>

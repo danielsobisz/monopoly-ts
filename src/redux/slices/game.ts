@@ -17,9 +17,21 @@ export const gameSlice = createSlice({
     setPlayers: (state, action) => {
       state.players = action.payload;
     },
+    setPlayerPostion: (state, action) => {
+      state.players = state.players.map((item) => {
+        if (item.name === action.payload.name) {
+          return {
+            ...item,
+            position: action.payload.position,
+          };
+        }
+
+        return item;
+      });
+    },
   },
 });
 
-export const { setPlayers } = gameSlice.actions;
+export const { setPlayers, setPlayerPostion } = gameSlice.actions;
 
 export default gameSlice.reducer;

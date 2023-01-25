@@ -45,8 +45,14 @@ export function ConfigPage(): React.ReactElement {
       toast.error('Check your player data');
       return;
     }
-    console.log(playerInfo);
-    dispatch(setPlayers(playerInfo));
+
+    const playerInfoExpanded = playerInfo.map((item) => ({
+      ...item,
+      position: 0,
+      money: 1500,
+    }));
+
+    dispatch(setPlayers(playerInfoExpanded));
     toast.success('lets play!');
     navigate('/game');
   };

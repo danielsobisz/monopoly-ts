@@ -1,14 +1,15 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
-import { Toaster } from 'react-hot-toast';
-import { ThemeProvider } from 'styled-components';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Toaster } from 'react-hot-toast';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { theme } from 'themes/theme';
+import { ThemeProvider } from 'styled-components';
+
 import { GlobalStyle } from 'themes/globalStyles';
+import { theme } from 'themes/theme';
 
-import { StartPage } from 'pages/Start';
-import { GamePage } from 'pages/Game';
 import { ConfigPage } from 'pages/Config';
+import { GamePage } from 'pages/Game';
+import { StartPage } from 'pages/Start';
 
 function App() {
   return (
@@ -16,6 +17,12 @@ function App() {
       <div className="app">
         <Helmet>
           <script src="https://kit.fontawesome.com/3f6db4959a.js" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+          />
         </Helmet>
 
         <BrowserRouter>

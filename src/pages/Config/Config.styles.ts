@@ -65,7 +65,7 @@ const ButtonWrapper = styled.div`
 `;
 
 const ButtonPawn = styled(Button)`
-  width: 20rem;
+  width: 22rem;
 `;
 
 export { Container, Title, Inputs, ButtonWrapper, PlayerData, Inner, ButtonPawn };

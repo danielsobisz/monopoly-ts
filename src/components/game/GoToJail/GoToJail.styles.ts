@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { pickColor } from 'themes/helpers/pickColor';
 
 const Corner = styled.div`
+  position: relative;
+
   grid-column: 11;
   grid-row: 1 / 1;
 
