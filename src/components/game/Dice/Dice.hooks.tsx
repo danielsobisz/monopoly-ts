@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
@@ -8,16 +8,21 @@ import { Pawn } from 'components/game/Pawn';
 
 import * as S from './Dice.styles';
 
+type PlayerPortal = {
+  name: string;
+  portal: React.ReactElement | null;
+};
+
 const useDice = () => {
   const dispatch = useAppDispatch();
 
   const dice = useRef<any>();
 
   const [isRolled, isRolledSet] = useState<boolean>();
-  const [portalElement, setPortalElement] = useState<React.ReactElement | null>(null);
+  const [portalElements, setPortalElements] = useState<PlayerPortal[]>([]);
 
-  const { players } = useAppSelector((state) => state.game);
-  const player = players.find((item) => item.name === 'test');
+  const players = useAppSelector((state) => state.game.players);
+  const player = useAppSelector((state) => state.game.currentPlayer);
 
   const generateDieSide = (amount: number) => (
     <S.DieItem data-side={`${amount}`}>
@@ -32,7 +37,7 @@ const useDice = () => {
   const roll = () => {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
 
-    let addedPosition = Number(player?.position) + randomNumber;
+    let addedPosition = Number(player?.oldPosition) + randomNumber;
 
     dice.current.dataset.roll = randomNumber;
 
@@ -40,14 +45,14 @@ const useDice = () => {
 
     setTimeout(() => {
       if (addedPosition >= 40) {
-        const endPosition = 40 - Number(player?.position);
+        const endPosition = 40 - Number(player?.oldPosition);
         const leftMoves = randomNumber - endPosition;
         addedPosition = 1 + leftMoves;
       }
 
       dispatch(
         setPlayerPostion({
-          name: 'test',
+          name: player?.name,
           position: addedPosition,
         })
       );
@@ -57,7 +62,13 @@ const useDice = () => {
       if (card) {
         const el = ReactDOM.createPortal(<Pawn name={player?.pawn!} />, card);
 
-        setPortalElement(el);
+        setPortalElements((state) => {
+          const stateInstance = state.map((item) =>
+            item.name === player?.name ? { name: player.name, portal: el } : item
+          ); // eslint-disable-line
+
+          return stateInstance;
+        });
       }
     }, 1250);
 
@@ -65,19 +76,23 @@ const useDice = () => {
   };
 
   useEffect(() => {
+    if (portalElements.length > 0) return;
+
     const start = document.getElementById('1');
 
-    if (start) {
-      const el = ReactDOM.createPortal(
-        <Pawn name={player?.pawn!} />,
-        document.getElementById('1')!
-      );
-      setPortalElement(el);
+    if (start && players) {
+      players.forEach((item) => {
+        const el = ReactDOM.createPortal(
+          <Pawn name={item.pawn} />,
+          document.getElementById('1')!
+        );
+        setPortalElements((state) => [...state, { name: item.name, portal: el }]);
+      });
     }
-  }, []);
+  }, [players]);
 
   return {
-    portalElement,
+    portalElements,
     dieSides,
     roll,
     isRolled,

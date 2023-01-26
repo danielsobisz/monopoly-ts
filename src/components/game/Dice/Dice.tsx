@@ -4,7 +4,7 @@ import { useDice } from './Dice.hooks';
 import * as S from './Dice.styles';
 
 export function Dice(): React.ReactElement {
-  const { dice, dieSides, isRolled, portalElement, roll } = useDice();
+  const { dice, dieSides, isRolled, portalElements, roll } = useDice();
 
   return (
     <>
@@ -23,7 +23,7 @@ export function Dice(): React.ReactElement {
         Roll the dice
       </Button>
 
-      {portalElement}
+      {portalElements.map((item) => item.portal)}
     </>
   );
 }
