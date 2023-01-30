@@ -1,10 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { Player } from 'types/game.type';
+import { PlayerType } from 'types/game.type';
 
 export type GameState = {
-  players: Player[];
-  currentPlayer?: Player;
+  players: PlayerType[];
+  currentPlayer?: PlayerType;
 };
 
 const initialState: GameState = {

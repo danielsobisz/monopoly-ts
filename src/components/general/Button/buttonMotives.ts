@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+
 import { pickColor } from 'themes/helpers/pickColor';
 
 const motives = {
@@ -21,6 +22,7 @@ const motives = {
   `,
   white: css`
     height: 4rem;
+    width: 20rem;
     padding: 1rem 2rem;
 
     background-color: ${pickColor('whiteOff')};

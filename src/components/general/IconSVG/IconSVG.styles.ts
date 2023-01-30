@@ -1,9 +1,8 @@
-import styled, { css } from 'styled-components';
-
-import { pickColor } from 'themes/helpers/pickColor';
-import { mediaHover } from 'themes/mixins/mediaHover';
+import styled from 'styled-components';
 
 import { ColorName } from 'types/general.type';
+
+import { pickColor } from 'themes/helpers/pickColor';
 
 export type StyledContainerProps = {
   color?: ColorName;
@@ -14,12 +13,6 @@ const Container = styled.div<StyledContainerProps>`
     stroke: ${({ color }) => pickColor(color!)};
     cursor: pointer;
   }
-
-  ${mediaHover(css`
-    svg {
-      stroke: ${pickColor('red')};
-    }
-  `)}
 `;
 
 export { Container };

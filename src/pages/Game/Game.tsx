@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { Player } from 'types/game.type';
+import { PlayerType } from 'types/game.type';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { setCurrentPlayer, setPlayers } from 'redux/slices/game';
@@ -15,15 +15,17 @@ export function GamePage(): React.ReactElement {
   // const navigate = useNavigate();
 
   const { players } = useAppSelector((state) => state.game);
-  const playersNames = players.map((item) => item.name);
   const currentPlayer = useAppSelector((state) => state.game.currentPlayer);
+
+  const playersNames = players.map((item) => item.name);
 
   useEffect(() => {
     if (players.length > 0) return;
 
     // mock
-    const mock: Player[] = [
+    const mock: PlayerType[] = [
       {
+        index: 1,
         name: 'Daniel',
         pawn: 'shoe',
         oldPosition: 1,
@@ -32,6 +34,7 @@ export function GamePage(): React.ReactElement {
         properties: [],
       },
       {
+        index: 2,
         name: 'Marysia',
         pawn: 'dog',
         oldPosition: 1,

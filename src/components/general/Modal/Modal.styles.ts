@@ -14,7 +14,7 @@ const Container = styled.div`
 
   background-color: rgba(0, 0, 0, 0.5);
 
-  z-index: 9999999999;
+  z-index: 9999;
 `;
 
 const ContainerInner = styled.div`

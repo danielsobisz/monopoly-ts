@@ -1,7 +1,6 @@
 import { useAppSelector } from 'redux/hooks';
 
-import { Button } from 'components/general/Button';
-import { Tooltip } from 'components/general/Tooltip';
+import { Headline } from 'components/general/Headline';
 
 import * as S from './ControlPanel.styles';
 
@@ -15,31 +14,38 @@ export function ControlPanel(): React.ReactElement {
 
   return (
     <S.Container>
-      <S.Info>
-        <S.Icon name="FaRegUser" />
+      <S.Name>
+        <S.Text
+          scale="lg"
+          color="whiteOff"
+          textTransform="uppercase"
+          textAlign="center"
+        >
+          {name}
+        </S.Text>
+      </S.Name>
 
-        <S.Text>{name}</S.Text>
-      </S.Info>
+      <S.Properties>
+        <S.Info>
+          <Headline color="whiteOff" scale="s">
+            Money
+          </Headline>
 
-      <S.Info>
-        <S.Icon name="FaRegMoneyBillAlt" />
+          <Headline color="whiteOff" scale="lg">
+            {money} $
+          </Headline>
+        </S.Info>
 
-        <S.Text>{money}$</S.Text>
-      </S.Info>
+        <S.Info>
+          <Headline color="whiteOff" scale="s">
+            Assets
+          </Headline>
 
-      <S.Info>
-        <S.Icon name="FaHome" />
-
-        <S.Text>{properties?.length}</S.Text>
-
-        {properties && properties?.length > 0 ? (
-          <Tooltip content="Check your properties">
-            <Button motive="m0">
-              <S.IconHand name="FaRegHandPointRight" />
-            </Button>
-          </Tooltip>
-        ) : undefined}
-      </S.Info>
+          <Headline color="whiteOff" scale="lg">
+            {properties?.length}
+          </Headline>
+        </S.Info>
+      </S.Properties>
     </S.Container>
   );
 }

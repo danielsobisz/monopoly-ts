@@ -39,5 +39,6 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'import/no-extraneous-dependencies': 'off',
+    'function-paren-newline': 'off',
   },
 };

@@ -1,59 +1,34 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { pickColor } from 'themes/helpers/pickColor';
-import { mediaHover } from 'themes/mixins/mediaHover';
 
-import { Icon as ReactIcon } from 'components/Icon';
+import { Headline } from 'components/general/Headline';
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
+const Container = styled.div``;
 
-  height: 32.5rem;
-  width: 27.7rem;
-  padding: 5rem;
+const Name = styled.div`
+  width: 28rem;
+  padding: 2rem 0;
 
-  background-color: ${pickColor('darkGrey')};
-  border-radius: 4rem;
+  background-color: ${pickColor('navy')};
 `;
+
+const Text = styled(Headline)``;
 
 const Info = styled.div`
   display: flex;
-  align-items: center;
-  gap: 2rem;
+
+  flex-direction: column;
+  gap: 0.2rem;
 `;
 
-const Icon = styled(ReactIcon)`
-  svg {
-    height: 4rem;
-    width: 4rem;
+const Properties = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 2rem;
 
-    color: ${pickColor('whiteOff')};
-  }
+  gap: 3rem;
+  margin-top: 2rem;
 `;
 
-const IconHand = styled(ReactIcon)`
-  svg {
-    height: 2.5rem;
-    width: 2.5rem;
-
-    color: ${pickColor('whiteOff')};
-
-    transition: 300ms;
-
-    ${mediaHover(css`
-      color: ${pickColor('red')};
-    `)}
-  }
-`;
-
-const Text = styled.p`
-  color: ${pickColor('whiteOff')};
-
-  font-size: 2rem;
-  text-transform: uppercase;
-`;
-
-export { Container, Text, Info, Icon, IconHand };
+export { Container, Text, Info, Name, Properties };

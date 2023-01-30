@@ -9,17 +9,17 @@ type InputProps = {
   name: string;
   children?: string;
   className?: string;
-  onChange: ChangeEventHandler<HTMLInputElement>;
+  onBlur: ChangeEventHandler<HTMLInputElement>;
 };
 
 export function Input(props: InputProps): React.ReactElement {
-  const { register, name, onChange, children = '', className = '' } = props;
+  const { register, name, onBlur, children = '', className = '' } = props;
 
   return (
     <S.Container className={className}>
       {children ? <S.Label>{children}</S.Label> : undefined}
 
-      <S.StyledInput {...register(name)} onChange={onChange} />
+      <S.StyledInput {...register(name)} onBlur={onBlur} />
     </S.Container>
   );
 }

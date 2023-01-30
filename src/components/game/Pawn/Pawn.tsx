@@ -10,7 +10,7 @@ export function Pawn(props: PawnProps): React.ReactElement {
   const { name } = props;
 
   return (
-    <S.Container>
+    <S.Container className="pawn-container">
       <IconSVG name={name} />
     </S.Container>
   );

@@ -1,9 +1,11 @@
 import { toast } from 'react-hot-toast';
 
-import { Player } from 'types/game.type';
+import { PlayerType } from 'types/game.type';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { setCurrentPlayer, updatePlayerOldPostion } from 'redux/slices/game';
+
+import endTurnAudio from 'assets/sounds/end-turn.mp3';
 
 import { ControlPanel } from 'components/game/ControlPanel';
 import { Dice } from 'components/game/Dice';
@@ -22,7 +24,8 @@ export function Sidebar(): React.ReactElement {
       toast.error('Player has to make a move');
       return;
     }
-    const findPlayerIndex = (player: Player) => player.name === currentPlayer?.name;
+    const findPlayerIndex = (player: PlayerType) =>
+      player.name === currentPlayer?.name;
     const index = players.findIndex(findPlayerIndex);
 
     disptach(updatePlayerOldPostion(currentPlayer?.name));
@@ -32,6 +35,9 @@ export function Sidebar(): React.ReactElement {
     }
 
     disptach(setCurrentPlayer(players[index + 1].name));
+
+    const sound = new Audio(endTurnAudio);
+    sound.play();
   };
 
   return (
@@ -39,6 +45,10 @@ export function Sidebar(): React.ReactElement {
       <ControlPanel />
 
       <Dice />
+
+      <Button motive="white" onClick={() => endTurn()}>
+        Check your assets
+      </Button>
 
       <Button motive="white" onClick={() => endTurn()}>
         End turn

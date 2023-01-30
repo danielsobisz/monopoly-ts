@@ -32,11 +32,12 @@ const useDice = () => {
     </S.DieItem>
   );
 
-  const dieSides = Array.from(Array(6).keys()).map((item) => generateDieSide(item + 1));
+  const dieSides = Array.from(Array(6).keys()).map((item) =>
+    generateDieSide(item + 1)
+  );
 
   const roll = () => {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
-
     let addedPosition = Number(player?.oldPosition) + randomNumber;
 
     dice.current.dataset.roll = randomNumber;
@@ -47,6 +48,7 @@ const useDice = () => {
       if (addedPosition >= 40) {
         const endPosition = 40 - Number(player?.oldPosition);
         const leftMoves = randomNumber - endPosition;
+
         addedPosition = 1 + leftMoves;
       }
 
@@ -64,8 +66,10 @@ const useDice = () => {
 
         setPortalElements((state) => {
           const stateInstance = state.map((item) =>
-            item.name === player?.name ? { name: player.name, portal: el } : item
-          ); // eslint-disable-line
+            item.name === player?.name
+              ? { name: player.name, portal: el }
+              : item
+          );
 
           return stateInstance;
         });
@@ -86,7 +90,10 @@ const useDice = () => {
           <Pawn name={item.pawn} />,
           document.getElementById('1')!
         );
-        setPortalElements((state) => [...state, { name: item.name, portal: el }]);
+        setPortalElements((state) => [
+          ...state,
+          { name: item.name, portal: el },
+        ]);
       });
     }
   }, [players]);

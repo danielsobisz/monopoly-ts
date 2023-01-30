@@ -71,9 +71,13 @@ const colors = {
   white: '#ffffff',
   whiteOff: '#F2F2F2',
 
+  navy: '#0D0E28',
+
   gray: '#5A5A5A',
   backgroundGrey: '#E3E3E3',
   darkGrey: '#A0A0A0',
+
+  silver: '#bfbfbf',
 
   board: '#fafaf8',
 

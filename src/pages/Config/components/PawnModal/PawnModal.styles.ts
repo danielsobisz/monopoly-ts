@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { pickColor } from 'themes/helpers/pickColor';
+import { mediaHover } from 'themes/mixins/mediaHover';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
 
   width: 120rem;
@@ -21,6 +21,14 @@ const Icons = styled.div`
   justify-content: center;
   align-items: center;
   gap: 8rem;
+
+  margin-top: 10rem;
+
+  ${mediaHover(css`
+    svg {
+      stroke: ${pickColor('red')};
+    }
+  `)}
 `;
 
 export { Container, Icons };

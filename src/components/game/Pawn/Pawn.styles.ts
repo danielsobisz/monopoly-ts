@@ -12,11 +12,16 @@ const Container = styled.div`
   width: 2.4rem;
   height: 2.4rem;
 
+  &.pawn-container:nth-of-type(2) {
+    right: 7rem;
+    bottom: 7rem;
+  }
+
   svg {
     width: 4.8rem;
     height: 4.8rem;
 
-    fill: ${pickColor('darkBlue')};
+    fill: ${pickColor('silver')};
   }
 `;
 

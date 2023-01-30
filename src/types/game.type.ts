@@ -5,11 +5,12 @@ export type Property = {
   occupiedBy: string;
 };
 
-export type Player = {
+export type PlayerType = {
   name: string;
   pawn: string;
   oldPosition: number;
   newPosition: number;
   money: number;
   properties?: Property[];
+  index: number;
 };
