@@ -10,7 +10,7 @@ export function ControlPanel(): React.ReactElement {
   if (!currentPlayer) {
     return <div />;
   }
-  const { name, money, properties } = currentPlayer;
+  const { name, money, assets } = currentPlayer;
 
   return (
     <S.Container>
@@ -42,7 +42,7 @@ export function ControlPanel(): React.ReactElement {
           </Headline>
 
           <Headline color="whiteOff" scale="lg">
-            {properties?.length}
+            {assets?.length}
           </Headline>
         </S.Info>
       </S.Properties>

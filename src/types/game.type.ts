@@ -1,8 +1,9 @@
-export type Property = {
+export type Asset = {
   name: string;
   group: string;
   price: string;
   occupiedBy: string;
+  level: number;
 };
 
 export type PlayerType = {
@@ -11,6 +12,6 @@ export type PlayerType = {
   oldPosition: number;
   newPosition: number;
   money: number;
-  properties?: Property[];
+  assets?: Asset[];
   index: number;
 };

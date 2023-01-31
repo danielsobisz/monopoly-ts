@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
 
+import { GameProvider } from 'contexts';
+
 import { GlobalStyle } from 'themes/globalStyles';
 import { theme } from 'themes/theme';
 
@@ -41,7 +43,14 @@ function App() {
 
               <Route path="/config" element={<ConfigPage />} />
 
-              <Route path="/game" element={<GamePage />} />
+              <Route
+                path="/game"
+                element={
+                  <GameProvider>
+                    <GamePage />
+                  </GameProvider>
+                }
+              />
             </Routes>
           </ThemeProvider>
         </BrowserRouter>

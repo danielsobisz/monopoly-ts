@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 
 import { PlayerType } from 'types/game.type';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { setCurrentPlayer, updatePlayerOldPostion } from 'redux/slices/game';
+
+import { GameContext } from 'contexts';
 
 import endTurnAudio from 'assets/sounds/end-turn.mp3';
 
@@ -18,6 +21,8 @@ export function Sidebar(): React.ReactElement {
 
   const currentPlayer = useAppSelector((state) => state.game.currentPlayer);
   const players = useAppSelector((state) => state.game.players);
+
+  const { isAssetsVisibleSet } = useContext(GameContext);
 
   const endTurn = () => {
     if (currentPlayer?.newPosition === currentPlayer?.oldPosition) {
@@ -46,7 +51,7 @@ export function Sidebar(): React.ReactElement {
 
       <Dice />
 
-      <Button motive="white" onClick={() => endTurn()}>
+      <Button motive="white" onClick={() => isAssetsVisibleSet(true)}>
         Check your assets
       </Button>
 

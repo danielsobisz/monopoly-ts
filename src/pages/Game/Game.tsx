@@ -1,10 +1,13 @@
-import { useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 
 import { PlayerType } from 'types/game.type';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import { setCurrentPlayer, setPlayers } from 'redux/slices/game';
 
+import { GameContext } from 'contexts';
+
+import { AssetsPanel } from 'components/game/AssetsPanel';
 import { Board } from 'components/game/Board';
 import { Sidebar } from 'components/game/Sidebar';
 
@@ -13,6 +16,8 @@ import * as S from './Game.styles';
 export function GamePage(): React.ReactElement {
   const disptach = useAppDispatch();
   // const navigate = useNavigate();
+
+  const { isAssetsVisible } = useContext(GameContext);
 
   const { players } = useAppSelector((state) => state.game);
   const currentPlayer = useAppSelector((state) => state.game.currentPlayer);
@@ -31,7 +36,43 @@ export function GamePage(): React.ReactElement {
         oldPosition: 1,
         newPosition: 1,
         money: 1500,
-        properties: [],
+        assets: [
+          {
+            name: 'baltic avenue',
+            price: '50',
+            group: 'purple',
+            occupiedBy: 'Daniel',
+            level: 1,
+          },
+          {
+            name: 'baltic avenue',
+            price: '50',
+            group: 'purple',
+            occupiedBy: 'Daniel',
+            level: 1,
+          },
+          {
+            name: 'baltic avenue',
+            price: '50',
+            group: 'purple',
+            occupiedBy: 'Daniel',
+            level: 1,
+          },
+          {
+            name: 'baltic avenue',
+            price: '50',
+            group: 'purple',
+            occupiedBy: 'Daniel',
+            level: 1,
+          },
+          {
+            name: 'baltic avenue',
+            price: '50',
+            group: 'purple',
+            occupiedBy: 'Daniel',
+            level: 1,
+          },
+        ],
       },
       {
         index: 2,
@@ -40,7 +81,7 @@ export function GamePage(): React.ReactElement {
         oldPosition: 1,
         newPosition: 1,
         money: 1500,
-        properties: [],
+        assets: [],
       },
     ];
     disptach(setPlayers(mock));
@@ -65,6 +106,8 @@ export function GamePage(): React.ReactElement {
       <Board />
 
       <Sidebar />
+
+      {isAssetsVisible ? <AssetsPanel /> : undefined}
     </S.Container>
   );
 }

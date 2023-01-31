@@ -40,5 +40,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'function-paren-newline': 'off',
+    'react/function-component-definition': 'off',
+    'react/jsx-wrap-multilines': 'off',
   },
 };
