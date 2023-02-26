@@ -24,11 +24,11 @@ const Icons = styled.div`
 
   margin-top: 10rem;
 
-  ${mediaHover(css`
-    svg {
+  svg {
+    ${mediaHover(css`
       stroke: ${pickColor('red')};
-    }
-  `)}
+    `)}
+  }
 `;
 
 export { Container, Icons };

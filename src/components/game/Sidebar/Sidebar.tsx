@@ -4,7 +4,11 @@ import { toast } from 'react-hot-toast';
 import { PlayerType } from 'types/game.type';
 
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
-import { setCurrentPlayer, updatePlayerOldPostion } from 'redux/slices/game';
+import {
+  buyProperty,
+  setCurrentPlayer,
+  updatePlayerOldPostion,
+} from 'redux/slices/game';
 
 import { GameContext } from 'contexts';
 
@@ -19,10 +23,40 @@ import * as S from './Sidebar.styles';
 export function Sidebar(): React.ReactElement {
   const disptach = useAppDispatch();
 
-  const currentPlayer = useAppSelector((state) => state.game.currentPlayer);
-  const players = useAppSelector((state) => state.game.players);
+  const { players, currentPlayer, currentCard } = useAppSelector(
+    (state) => state.game
+  );
 
   const { isAssetsVisibleSet } = useContext(GameContext);
+
+  const buy = () => {
+    if (!currentCard || currentCard?.occupiedBy) {
+      return;
+    }
+
+    disptach(buyProperty(currentCard));
+  };
+
+  const renderActionButton = (type: string) => {
+    switch (type) {
+      case 'property':
+      case 'railroad':
+      case 'electric-company':
+      case 'waterworks':
+        return !currentCard?.occupiedBy ? (
+          <Button motive="white" onClick={() => buy()}>
+            Buy property
+          </Button>
+        ) : undefined;
+      case 'chance':
+      case 'community-chest':
+        return <Button>Take a card</Button>;
+      case 'income-tax':
+        return <Button>Pay</Button>;
+      default:
+        return undefined;
+    }
+  };
 
   const endTurn = () => {
     if (currentPlayer?.newPosition === currentPlayer?.oldPosition) {
@@ -58,6 +92,8 @@ export function Sidebar(): React.ReactElement {
       <Button motive="white" onClick={() => endTurn()}>
         End turn
       </Button>
+
+      {currentCard ? renderActionButton(currentCard.type) : undefined}
     </S.Container>
   );
 }

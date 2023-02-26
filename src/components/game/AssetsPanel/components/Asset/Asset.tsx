@@ -8,10 +8,10 @@ import * as S from './Asset.styles';
 type AssetProps = AssetType;
 
 export function Asset(props: AssetProps): React.ReactElement {
-  const { name, price, level, group } = props;
+  const { name, price, level, color } = props;
 
   return (
-    <S.Container color={group as ColorName}>
+    <S.Container color={color as ColorName}>
       <S.Name color="white" textTransform="uppercase" textAlign="center">
         {name}
       </S.Name>

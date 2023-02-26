@@ -42,5 +42,6 @@ module.exports = {
     'function-paren-newline': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-wrap-multilines': 'off',
+    'consistent-return': 'off',
   },
 };

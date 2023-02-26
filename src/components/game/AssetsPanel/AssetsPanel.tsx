@@ -9,11 +9,7 @@ import { Modal } from 'components/general/Modal';
 import * as S from './AssetsPanel.styles';
 import { Asset } from './components/Asset';
 
-type AssetsPanelProps = {};
-
-export function AssetsPanel(props: AssetsPanelProps): React.ReactElement {
-  // const {} = props;
-
+export function AssetsPanel(): React.ReactElement {
   const currentPlayer = useAppSelector((state) => state.game.currentPlayer);
 
   if (!currentPlayer || !currentPlayer.assets) return <div />;

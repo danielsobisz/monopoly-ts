@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Button } from 'components/general/Button';
 
 import { useDice } from './Dice.hooks';
@@ -23,7 +25,9 @@ export function Dice(): React.ReactElement {
         Roll the dice
       </Button>
 
-      {portalElements.map((item) => item.portal)}
+      {portalElements.map((item) => (
+        <React.Fragment key={item.name}>{item.portal}</React.Fragment>
+      ))}
     </>
   );
 }

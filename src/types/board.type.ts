@@ -6,6 +6,7 @@ export type CardType = {
   icon?: string;
   info?: string;
   type: string;
+  occupiedBy?: string;
 };
 
 export type BoardType = {

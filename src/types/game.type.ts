@@ -1,6 +1,6 @@
 export type Asset = {
   name: string;
-  group: string;
+  color: string;
   price: string;
   occupiedBy: string;
   level: number;
